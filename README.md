@@ -18,6 +18,18 @@ List of things done to learn System Programming (in C):
 - Do the Rutgers's Programming Assignments:
     - Status: Not Started
 
+## Operating Systems
+To be done in C   
+Section yet to be 🚧   
+
+## Concurrent Systems
+To be done in Python   
+Section yet to be 🚧   
+
+## Distributed Systems
+To be done in Golang   
+Section yet to be 🚧
+
 
 ## List of resources:
 
