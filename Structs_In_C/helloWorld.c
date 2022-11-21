@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<string.h>
+//OpenMP header, checking if my iMac has it
+#include <omp.h>
 
 struct Student
 {
@@ -17,7 +19,11 @@ int main(){
     strcpy(newStud.name, "Sarah");
 
     printf("%s, %d, %s, %c", newStud.name, newStud.age, newStud.branch, newStud.gender);
-
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Hello World!\n");
+    }
+    
     printf("\n");
 
     return 0;
