@@ -16,6 +16,8 @@ List of things done to learn System Programming (in C):
 <br>
 - Start with going over lecture notes for [Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
     - Status: In Progress
+- Work on the exerd[Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
+    - Status: In Progress
 - Do the Rutgers's Programming Assignments:
     - Status: Not Started
 
@@ -59,3 +61,4 @@ Section yet to be 🚧
 - [System Programming course @ Illinois CS](https://github.com/illinois-cs241/coursebook)
 - [System Programming course @ Rutgers CS](https://github.com/USMC1941/CS214-Rutgers)
 - [Tim Matteson's Lectures on Parallel Programming with OPENMP](https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
+- [CAS 766](http://www.cas.mcmaster.ca/~emil/cas766winter20-21/index.php?page=install)
