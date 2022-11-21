@@ -53,3 +53,4 @@ Section yet to be 🚧
 - [Prof. Boorzoo's Notes](http://www.cse.msu.edu/~borzoo/teaching/) [Operating Systems]   
 - [System Programming course @ Illinois CS](https://github.com/illinois-cs241/coursebook)
 - [System Programming course @ Rutgers CS](https://github.com/USMC1941/CS214-Rutgers)
+- [Tim Matteson's Lectures on Parallel Programming with OPENMP](https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
