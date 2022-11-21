@@ -8,6 +8,7 @@ Main motivation to cover this materials is to build a stronger foundation in Com
  2) Concurrent Systems (To be completed)   
  3) Operating Systems (To be completed)   
  4) Distributed Systems (To be completed)   
+ 5) Parallel Programming (To be completed, stretch goal)
 
 
 ## System Programming
@@ -28,6 +29,10 @@ Section yet to be 🚧
 
 ## Distributed Systems
 To be done in Golang   
+Section yet to be 🚧
+
+## Parallel Programming
+To be done in C   
 Section yet to be 🚧
 
 
