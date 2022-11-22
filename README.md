@@ -24,6 +24,8 @@ List of things done to learn System Programming (in C):
 ## Operating Systems
 To be done in C   
 Section yet to be 🚧   
+- [An Operating System Course you can get certificate for](https://learn.saylor.org/course/view.php?id=94)
+- Then move on to practical C programming exercises for OS related topics!
 
 ## Concurrent Systems
 To be done in Python   
@@ -32,6 +34,7 @@ Section yet to be 🚧
 ## Distributed Systems
 To be done in Golang   
 Section yet to be 🚧
+- Probably take a primer on Golang then learn more about Distributed Systems
 
 ## Parallel Programming
 To be done in C   

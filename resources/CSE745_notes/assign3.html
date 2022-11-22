@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)https://physics.mcmaster.ca/~syam/teaching/CSE745/assign3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="GENERATOR" content="LibreOffice 3.5  (Linux)">
+<meta name="CREATED" content="0;0">
+<meta name="CHANGED" content="20121017;11162600">
+<meta name="Originator" content="Microsoft Word 10">
+<meta name="ProgId" content="Word.Document">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Sergey Mashchenko</o:Author>
+  <o:LastAuthor>Sergey Mashchenko</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>11</o:TotalTime>
+  <o:Created>2006-09-29T17:47:00Z</o:Created>
+  <o:LastSaved>2006-09-29T17:58:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>184</o:Words>
+  <o:Characters>1055</o:Characters>
+  <o:Lines>8</o:Lines>
+  <o:Paragraphs>2</o:Paragraphs>
+  <o:CharactersWithSpaces>1237</o:CharactersWithSpaces>
+  <o:Version>10.2625</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+<style type="text/css">P{color:#000}</style>
+</head> <body lang="en-US" text="#000000" dir="LTR"> <p align="CENTER"><font size="5"><b>CSE-745 2022 Assignment #3</b></font></p>
+<hr> <p><font size="3" style="font-size: 13pt">Your task is to write an MPI version of the serial code
+~syam/ces745/Assignment3/tsp.c (on graham and cedar). This is a brute force Monte Carlo (random) search for the solution of the
+Traveling Salesman Problem. The problem is stated as follows: given a list of N cities (x,y coordinates; flat geometry is
+assumed for simplicity), find the shortest itinerary which would start from the city #1, visit all the other cities once, and
+come back to the original city. (For simplicity, traveling is assumed to be done in straight lines connecting the two cities).
+The problem has the difficulty of (N-1)! order, meaning that it is practically impossible to find the best solution using brute
+force approach when N&gt;30. Your program should not attempt to find the absolutely best solution – instead it should find the
+best solution in a given number of random (Monte Carlo) attempts. The core of the algorithm is the generation of random
+permutations of the cities list. No attempts should be made to test if your random permutations of the cities list are unique
+(this will dramatically slow down the execution, and will not give much of an advantage). You have to optimize your MPI code
+for N=12, but the code should be flexible enough to work with a range of N. (It is convenient to define N as a macro, e.g.
+“#define N_CITIES 12”.) For small enough N (10-12) your code should easily find the absolutely best (that is, the actual)
+solution – use this to test the correctness of your code (by comparing the result with the result from the serial version of
+the code; both the traveling distance and the itinerary should be identical.). Make sure to distribute the workload as evenly
+as possible between all the ranks. <b>The code should print both the shortest distance and the corresponding
+itinerary.</b></font></p>
+<p><font size="3" style="font-size:
+13pt">More detailed instructions are given in the header of the file
+tsp.c. You are expected to achieve a speedup close to the number of cpu
+cores (threads) used, with N=12. <b>You should put comments inside your code
+explaining what you are doing.</b> </font>
+</p>
+<p><font size="3" style="font-size: 13pt">Marks will be taken off for
+code bugs (some or all the results are wrong), for insufficient
+commenting in the code, and for poor performance. It must be your own
+work and you are responsible for adhering to the Senate Policy
+Statement on Academic Ethics.</font>
+</p>
+<p><font size="3" style="font-size: 13pt"><b>Due date: Monday
+December 5, 2022</b></font> <font size="3" style="font-size: 13pt">, send me the solution through email, to <a href="mailto:syam@physics.mcmaster.ca">syam@physics.mcmaster.ca</a>
+. Late submissions will
+have their mark reduced by 10% every day. </font>
+</p>
+<p><font size="3" style="font-size: 13pt">This assignment is worth 10
+percent of the course grade.</font>
+</p>
+
+
+</body></html>
