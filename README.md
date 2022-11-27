@@ -66,4 +66,5 @@ Section yet to be 🚧
 - [Tim Matteson's Lectures on Parallel Programming with OPENMP](https://www.youtube.com/watch?v=nE-xN4Bf8XI&list=PLLX-Q6B8xqZ8n8bwjGdzBJ25X2utwnoEG)
 - [CAS 766](http://www.cas.mcmaster.ca/~emil/cas766winter20-21/index.php?page=install)
 - [CS 4F03](http://www.cas.mcmaster.ca/~nedialk/COURSES/4f03/node6.html)
-- [INF3173](https://inf3173.uqam.ca/)
+- [Montreal University's Operating System course INF3173](https://inf3173.uqam.ca/)
+- [Learning Computer Organization in C](https://web.stanford.edu/class/archive/cs/cs107/cs107.1186/syllabus.html)
