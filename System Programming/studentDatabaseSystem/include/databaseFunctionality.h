@@ -19,4 +19,8 @@ void withdraw(int idNo, student **list, int *sizePtr);
 
 void destroy_list(student **list, int *sizePtr);
 
+void practiceSyntax();
+
+void illustratePointerMechanics();
+
 #endif

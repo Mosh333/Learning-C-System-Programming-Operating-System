@@ -10,4 +10,11 @@ typedef struct student {
     float gradeFinal;
 } student;
 
+//this does not make sense btw
+// typedef struct studentList {
+//     struct studentList[1000];   //able to store 1000 students max
+// } studentList;
+
+//you just do this in C: student studentList[n] to define an array of N of student structures!
+
 #endif

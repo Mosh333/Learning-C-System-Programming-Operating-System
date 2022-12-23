@@ -18,8 +18,15 @@ Useful links for creating C project:
 
 int main() {
    printf("Hello World!\n");
-   
-   output_final_course_grades();
+   char fileName[50] = "studentDatabase.txt";
+   int *size;
+   int x = 5;
+   size = &x;
+   printf("%d", *size);
+   create_class_list(fileName, size);
+   illustratePointerMechanics();
+   //create_class_list();
+   practiceSyntax();
 
    return 0;
 }
