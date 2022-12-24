@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdlib.h>
 #include <math.h>
 #include "../include/databaseFunctionality.h"
 #include "../include/studentStruct.h"
@@ -12,24 +15,78 @@ struct student **create_class_list(char *filename, int *sizePtr){
     //https://stackoverflow.com/questions/4470950/why-cant-we-use-double-pointer-to-represent-two-dimensional-arrays
     //https://cboard.cprogramming.com/c-programming/179285-returning-double-pointer-help.html
     
-    //student **student1;
-    //student *pointer = *student1;
-    //student **data = &pointer;
+    printf("%d\n", *sizePtr);
+    srand(time(NULL));
+
+    int temp1;
+    char temp2[15], temp3[15];
+    
+
     FILE *fptr;
     char buff[256];
-    printf("%s\n", filename);
-    fptr = fopen("studentDatabase.txt","r"); //w+ for reading+writing
+    int size;
+    printf("Filename is: %s\n", filename);
+    #ifdef _WIN32
+        fptr = fopen(".\\src\\studentDatabase.txt","r"); //w+ for reading+writing
+    #elif __unix__
+        fptr = fopen("./src/studentDatabase.txt","r"); //w+ for reading+writing
+    #else
+        printf("Other OS\n");
+    #endif
 
     if(fptr == NULL){
         printf("Error!");
         exit(1);
     }
+    
+    printf("Contents of the file are: \n");
+    fscanf(fptr,"%d",sizePtr);     //or &sizePtr
+    printf("Number of students are: %d\n", *sizePtr);   //and sizePtr
 
-    printf("%s\n", buff);
+    student **studentList = (struct student**)calloc(*sizePtr,sizeof(student));
+    for (int i = 0; i < *sizePtr; i++)
+    {
+    //     //must allocate and initialize for each student to be stored in **studentList
+    //     // student *oneStudent = (struct student*)calloc(1,sizeof(student));
+    //     //rand() % 10000 + 1
+    //     // oneStudent->studentId = rand() % 10000 + 1;
+    //     // strcpy(oneStudent->firstName, "moshiur");
+    //     // strcpy(oneStudent->lastName, "howlader");
 
-    fclose(fptr);
+    //     // printf("%p, %p, %d, %s, %s\n", &oneStudent, &oneStudent->studentId, oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
 
-    return student1;
+    //     // printf("%p, %p, %p, %p, %p\n", &studentList[i], *oneStudent, oneStudent, &studentList, &studentList[i]->firstName);
+    //     printf("%p, %p, %s, %s\n", &studentList[i], &studentList, &studentList[i]->firstName, &studentList[i]->lastName);
+
+    //     // printf("%d\n",i);
+    //     // int randVal = rand() % 10000 + 1;
+    //     // printf("%d\n", randVal);
+    //     // int val = 5;
+    //     // studentList[i]->studentId = 2;
+    //     // printf("%d, %d, %d\n", &studentList, &studentList[i], &studentList[i]->studentId);
+    //     // &studentList[i]->firstName = "moshiur";
+    //     // &studentList[i]->lastName = "howlader";
+    //     // &studentList[i]->gradeProj1 = 86;
+    //     // &studentList[i]->gradeProj2 = 94;
+    //     // &studentList[i]->gradeFinal = (&studentList[i]->gradeProj1 + &studentList[i]->gradeProj2)/2;
+
+    //     // printf("%d\n", &studentList[i]->firstName);
+
+        fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
+        printf("%i %s %s\n", temp1, temp2, temp3);
+
+    }
+    
+    //student *pointer = *student1;
+    //student **data = &pointer;
+
+    // printf("%s", buff);
+    // fgets(buff,5,fptr);
+    // printf("%s\n", buff);
+
+    fclose(fptr);     //doing free(fptr); works sometimes, other times a segmentation fault
+
+    return studentList;
 }
 
 //to be completedd

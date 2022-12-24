@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include <math.h>
 #include "../include/databaseFunctionality.h"
 #include "../include/studentStruct.h"
@@ -19,14 +20,15 @@ Useful links for creating C project:
 int main() {
    printf("Hello World!\n");
    char fileName[50] = "studentDatabase.txt";
-   int *size;
-   int x = 5;
-   size = &x;
-   printf("%d", *size);
+   int sizeVar;
+   int *size=&sizeVar;
+   *size = 5;
+   
+   //printf("%d", *size);
    create_class_list(fileName, size);
-   illustratePointerMechanics();
+   //illustratePointerMechanics();
    //create_class_list();
-   practiceSyntax();
+   //practiceSyntax();
 
    return 0;
 }
