@@ -47,16 +47,20 @@ struct student **create_class_list(char *filename, int *sizePtr){
     for (int i = 0; i < *sizePtr; i++)
     {
     //     //must allocate and initialize for each student to be stored in **studentList
-    //     // student *oneStudent = (struct student*)calloc(1,sizeof(student));
-    //     //rand() % 10000 + 1
-    //     // oneStudent->studentId = rand() % 10000 + 1;
-    //     // strcpy(oneStudent->firstName, "moshiur");
-    //     // strcpy(oneStudent->lastName, "howlader");
+        student *oneStudent = (struct student*)calloc(1,sizeof(student));
+        
+        oneStudent->studentId = rand() % 10000 + 1;
+        printf("%d ", oneStudent->studentId);
+        strcpy(oneStudent->firstName, "moshiur");
+        strcpy(oneStudent->lastName, "howlader");
+        studentList[i] = oneStudent;
 
-    //     // printf("%p, %p, %d, %s, %s\n", &oneStudent, &oneStudent->studentId, oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
+        printf("%p, %p, %d\n", &(studentList[i]), &oneStudent, studentList[i]->studentId);
 
-    //     // printf("%p, %p, %p, %p, %p\n", &studentList[i], *oneStudent, oneStudent, &studentList, &studentList[i]->firstName);
-    //     printf("%p, %p, %s, %s\n", &studentList[i], &studentList, &studentList[i]->firstName, &studentList[i]->lastName);
+        // printf("%p, %p, %d, %s, %s\n", &oneStudent, &oneStudent->studentId, oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
+
+        // printf("%p, %p, %p, %p, %p\n", &studentList[i], *oneStudent, oneStudent, &studentList, &studentList[i]->firstName);
+        // printf("%p, %p, %s, %s\n", &studentList[i], &studentList, &studentList[i]->firstName, &studentList[i]->lastName);
 
     //     // printf("%d\n",i);
     //     // int randVal = rand() % 10000 + 1;
@@ -72,8 +76,11 @@ struct student **create_class_list(char *filename, int *sizePtr){
 
     //     // printf("%d\n", &studentList[i]->firstName);
 
-        fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
-        printf("%i %s %s\n", temp1, temp2, temp3);
+        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
+        // printf("%i %s %s\n", temp1, temp2, temp3);
+
+        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
+        // printf("%i %s %s\n", temp1, temp2, temp3);
 
     }
     
