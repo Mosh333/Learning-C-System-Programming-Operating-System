@@ -38,6 +38,7 @@ int main() {
    withdraw(9000, classList, size);
    withdraw(1200, classList, size);
    withdraw(32, classList, size);
+   destroy_list(classList, size);
    //illustratePointerMechanics();
    //create_class_list();
    //practiceSyntax();

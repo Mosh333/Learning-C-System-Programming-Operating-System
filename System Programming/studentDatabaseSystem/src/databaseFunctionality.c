@@ -184,9 +184,6 @@ void withdraw(int idNo, student **list, int *sizePtr){
             printf("%d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
         }
 
-
-
-
         printf("size is: %d\n", *sizePtr);
         
     }else{
@@ -195,6 +192,22 @@ void withdraw(int idNo, student **list, int *sizePtr){
 
 }
 
+
+void destroy_list(student **list, int *sizePtr){
+    printf("destroy_list results: \n");
+
+    for (size_t i = 0; i < *sizePtr; i++)
+    {
+        //have to deallocate each member first
+        // printf("%d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        free(list[i]);
+        // printf("%d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+    }
+    *sizePtr = 0;
+
+    //finally  good bye classlist struct :)
+    free(list);
+}
 
 //to be completedd
 void practiceSyntax(){
