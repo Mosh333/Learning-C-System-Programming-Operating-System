@@ -1,0 +1,201 @@
+        // printf("%p, %p, %d, %s, %s\n", &oneStudent, &oneStudent->studentId, oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
+
+        // printf("%p, %p, %p, %p, %p\n", &studentList[i], *oneStudent, oneStudent, &studentList, &studentList[i]->firstName);
+        // printf("%p, %p, %s, %s\n", &studentList[i], &studentList, &studentList[i]->firstName, &studentList[i]->lastName);
+
+    //     // printf("%d\n",i);
+    //     // int randVal = rand() % 10000 + 1;
+    //     // printf("%d\n", randVal);
+    //     // int val = 5;
+    //     // studentList[i]->studentId = 2;
+    //     // printf("%d, %d, %d\n", &studentList, &studentList[i], &studentList[i]->studentId);
+    //     // &studentList[i]->firstName = "moshiur";
+    //     // &studentList[i]->lastName = "howlader";
+    //     // &studentList[i]->gradeProj1 = 86;
+    //     // &studentList[i]->gradeProj2 = 94;
+    //     // &studentList[i]->gradeFinal = (&studentList[i]->gradeProj1 + &studentList[i]->gradeProj2)/2;
+
+    //     // printf("%d\n", &studentList[i]->firstName);
+
+        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
+        // printf("%i %s %s\n", temp1, temp2, temp3);
+
+        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
+        // printf("%i %s %s\n", temp1, temp2, temp3);
+
+
+
+
+   for (size_t i = 0; i < *size; i++)
+   {
+      printf("moshiur: %d %d %d %s %s %f\n", classList[i]->gradeProj1, classList[i]->gradeProj2, classList[i]->studentId, classList[i]->firstName, classList[i]->lastName, classList[i]->gradeFinal);
+   }       
+
+
+
+
+
+//with the free()
+
+mommy: 4580 50 84 4580 Alan Turing 67.000000
+baina: 1200 75 82 1200 Isaac Newton 78.500000
+baina: 2012 3 69 2012 Bob Smith 36.000000
+baina: 3520 92 12 3520 Jane Doe 52.000000
+baina: 1516909098 50 84 1516909098  Turing 67.000000
+baina: 5630 83 55 5630 Sarah McJoe 69.000000
+baina: 6737 59 100 6737 Micro Soft 79.500000
+baina: 9000 78 95 9000 Elvis Presley 86.500000
+haina: 1200 75 82 1200 Isaac Newton 78.500000
+haina: 2012 3 69 2012 Bob Smith 36.000000
+haina: 3520 92 12 3520 Jane Doe 52.000000
+haina: 5630 83 55 5630 Sarah McJoe 69.000000
+haina: 6737 59 100 6737 Micro Soft 79.500000
+haina: 9000 78 95 9000 Elvis Presley 86.500000
+haina: 9000 78 95 9000 Elvis Presley 86.500000
+
+
+//without free()
+mommy: 4580 50 84 4580 Alan Turing 67.000000
+baina: 1200 75 82 1200 Isaac Newton 78.500000
+baina: 2012 3 69 2012 Bob Smith 36.000000
+baina: 3520 92 12 3520 Jane Doe 52.000000
+baina: 4580 50 84 4580 Alan Turing 67.000000
+baina: 5630 83 55 5630 Sarah McJoe 69.000000
+baina: 6737 59 100 6737 Micro Soft 79.500000
+baina: 9000 78 95 9000 Elvis Presley 86.500000
+haina: 1200 75 82 1200 Isaac Newton 78.500000
+haina: 2012 3 69 2012 Bob Smith 36.000000
+haina: 3520 92 12 3520 Jane Doe 52.000000
+haina: 5630 83 55 5630 Sarah McJoe 69.000000
+haina: 6737 59 100 6737 Micro Soft 79.500000
+haina: 9000 78 95 9000 Elvis Presley 86.500000
+haina: 9000 78 95 9000 Elvis Presley 86.500000
+
+
+
+void withdraw(int idNo, student **list, int *sizePtr){
+    //https://stackoverflow.com/questions/33170802/c-does-freeing-an-array-of-pointers-also-free-what-theyre-pointing-to
+    int searchResult = -1;
+        
+    searchResult = find(idNo, list, *sizePtr);
+    if(searchResult != -1){
+        //remove and deallocate the student from the list
+        printf("mommy: %d %d %d %d %s %s %f\n", list[searchResult]->studentId, list[searchResult]->gradeProj1, list[searchResult]->gradeProj2, list[searchResult]->studentId, list[searchResult]->firstName, list[searchResult]->lastName, list[searchResult]->gradeFinal);
+
+        printf("------------------------------------------------------\n");
+        for (size_t i = 0; i < *sizePtr; i++)
+        {
+            printf("zaina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+        printf("mommy: %d %d %d %d %s %s %f\n", &list[searchResult]->studentId, &list[searchResult]->gradeProj1, &list[searchResult]->gradeProj2, &list[searchResult]->studentId, &list[searchResult]->firstName, &list[searchResult]->lastName, &list[searchResult]->gradeFinal);
+
+        free(list[searchResult]);
+
+        printf("mommy: %d %d %d %d %s %s %f\n", &list[searchResult]->studentId, &list[searchResult]->gradeProj1, &list[searchResult]->gradeProj2, &list[searchResult]->studentId, &list[searchResult]->firstName, &list[searchResult]->lastName, &list[searchResult]->gradeFinal);
+
+
+        for (size_t i = 0; i < *sizePtr; i++)
+        {
+            printf("baina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+        for (size_t i = searchResult; i < *sizePtr-1; i++)
+        {
+            list[i] = list[i+1];
+        }
+        
+        //pointer xD: https://stackoverflow.com/questions/8208021/how-to-increment-a-pointer-address-and-pointers-value
+        (*sizePtr)--;
+        free(list[0]);
+        free(list[1]);
+        free(list[2]);
+        free(list[3]);
+        free(list[4]);
+        free(list[5]);
+        // free(list[6]);
+        free(list[7]);
+
+        for (size_t i = 0; i < *sizePtr+1; i++)
+        {
+            printf("haina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+
+
+
+        printf("size is: %d\n", *sizePtr);
+        
+    }else{
+        printf("The student with ID=%d does not exist in the list.\n", idNo);
+    }
+
+}
+
+
+
+
+void withdraw(int idNo, student **list, int *sizePtr){
+    //https://stackoverflow.com/questions/33170802/c-does-freeing-an-array-of-pointers-also-free-what-theyre-pointing-to
+    int searchResult = -1;
+        
+    searchResult = find(idNo, list, *sizePtr);
+    if(searchResult != -1){
+        //remove and deallocate the student from the list
+        printf("mommy: %d %d %d %d %s %s %f\n", list[searchResult]->studentId, list[searchResult]->gradeProj1, list[searchResult]->gradeProj2, list[searchResult]->studentId, list[searchResult]->firstName, list[searchResult]->lastName, list[searchResult]->gradeFinal);
+
+        printf("------------------------------------------------------\n");
+        for (size_t i = 0; i < *sizePtr; i++)
+        {
+            printf("zaina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+        printf("mommy: %d %d %d %d %s %s %f\n", &list[searchResult]->studentId, &list[searchResult]->gradeProj1, &list[searchResult]->gradeProj2, &list[searchResult]->studentId, &list[searchResult]->firstName, &list[searchResult]->lastName, &list[searchResult]->gradeFinal);
+
+        free(list[searchResult]);
+
+        printf("mommy: %d %d %d %d %s %s %f\n", &list[searchResult]->studentId, &list[searchResult]->gradeProj1, &list[searchResult]->gradeProj2, &list[searchResult]->studentId, &list[searchResult]->firstName, &list[searchResult]->lastName, &list[searchResult]->gradeFinal);
+
+
+        for (size_t i = 0; i < *sizePtr; i++)
+        {
+            printf("baina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+        for (size_t i = searchResult; i < *sizePtr-1; i++)
+        {
+            list[i] = list[i+1];
+        }
+        
+        //pointer xD: https://stackoverflow.com/questions/8208021/how-to-increment-a-pointer-address-and-pointers-value
+        (*sizePtr)--;
+        free(list[0]);
+        free(list[1]);
+        free(list[2]);
+        free(list[3]);
+        free(list[4]);
+        free(list[5]);
+        // free(list[6]);
+        free(list[7]);
+
+        for (size_t i = 0; i < *sizePtr+1; i++)
+        {
+            printf("haina: %d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+        printf("------------------------------------------------------\n");
+
+
+
+
+        printf("size is: %d\n", *sizePtr);
+        
+    }else{
+        printf("The student with ID=%d does not exist in the list.\n", idNo);
+    }
+
+}

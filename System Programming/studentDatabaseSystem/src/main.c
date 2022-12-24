@@ -19,16 +19,29 @@ Useful links for creating C project:
 
 int main() {
    printf("Hello World!\n");
-   char fileName[50] = "studentDatabase.txt";
+   char fileName[50] = "./src/studentDatabase.txt";  //for windows: .\\src\\studentDatabased.txt, for linux: ./src/studentDatabase.txt
    int sizeVar;
    int *size=&sizeVar;
-   *size = 5;
+   *size = 0;
+
+   student **classList;
    
-   //printf("%d", *size);
-   create_class_list(fileName, size);
+   printf("Size originally is before the create_class_list() call is: %d\n", *size);
+   classList = create_class_list(fileName, size);
+   printf("classList[0]->studentId: %d\n", classList[0]->studentId);
+   printf("find() output is: %d\n", find(4580,classList,*size));
+   input_grades("./src/studentGrades.txt", classList,*size);
+   compute_final_course_grades(classList,*size);
+   output_final_course_grades("./src/studentFinalGradesOnly.txt", classList, *size);
+   print_list(classList,*size);
+   withdraw(4580, classList, size);
+   withdraw(9000, classList, size);
+   withdraw(1200, classList, size);
+   withdraw(32, classList, size);
    //illustratePointerMechanics();
    //create_class_list();
    //practiceSyntax();
+   printf("Size after the create_class_list() call is: %d\n", *size);
 
    return 0;
 }

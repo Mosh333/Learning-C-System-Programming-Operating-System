@@ -10,4 +10,3 @@ then
 else
     echo "Make sure you are running from top level directory (./studentDatabaseSystem)"
 fi
-

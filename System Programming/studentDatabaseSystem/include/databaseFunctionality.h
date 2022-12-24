@@ -9,9 +9,9 @@ int find(int idNo, student **list, int size);
 
 void input_grades( char *filename, student **list, int size );
 
-float compute_final_course_grades();
+void compute_final_course_grades(student **list, int size);
 
-void output_final_course_grades();
+void output_final_course_grades(char *filename, student **list, int size);
 
 void print_list( student **list, int size);
 

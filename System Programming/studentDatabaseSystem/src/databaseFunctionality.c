@@ -16,20 +16,14 @@ struct student **create_class_list(char *filename, int *sizePtr){
     //https://cboard.cprogramming.com/c-programming/179285-returning-double-pointer-help.html
     
     printf("%d\n", *sizePtr);
-    srand(time(NULL));
-
-    int temp1;
-    char temp2[15], temp3[15];
-    
+    srand(time(NULL));    
 
     FILE *fptr;
-    char buff[256];
-    int size;
-    printf("Filename is: %s\n", filename);
+    printf("Reading from file called: %s\n", filename);
     #ifdef _WIN32
-        fptr = fopen(".\\src\\studentDatabase.txt","r"); //w+ for reading+writing
+        fptr = fopen(filename,"r"); //w+ for reading+writing
     #elif __unix__
-        fptr = fopen("./src/studentDatabase.txt","r"); //w+ for reading+writing
+        fptr = fopen(filename,"r"); //w+ for reading+writing
     #else
         printf("Other OS\n");
     #endif
@@ -48,59 +42,165 @@ struct student **create_class_list(char *filename, int *sizePtr){
     {
     //     //must allocate and initialize for each student to be stored in **studentList
         student *oneStudent = (struct student*)calloc(1,sizeof(student));
-        
-        oneStudent->studentId = rand() % 10000 + 1;
-        printf("%d ", oneStudent->studentId);
-        strcpy(oneStudent->firstName, "moshiur");
-        strcpy(oneStudent->lastName, "howlader");
+
+        //alternative approach to define dynamically at run time:
+        // oneStudent->studentId = rand() % 10000 + 1;
+        // printf("%d ", oneStudent->studentId);
+        // strcpy(oneStudent->firstName, "moshiur");
+        // strcpy(oneStudent->lastName, "howlader");
+
+        //copy paste from file
+        fscanf(fptr,"%i %s %s", &oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
+        //map the oneStudent to be in the memory location of studentList at ith index byte offset hence storage oneStudent at the given location
         studentList[i] = oneStudent;
 
-        printf("%p, %p, %d\n", &(studentList[i]), &oneStudent, studentList[i]->studentId);
-
-        // printf("%p, %p, %d, %s, %s\n", &oneStudent, &oneStudent->studentId, oneStudent->studentId, oneStudent->firstName, oneStudent->lastName);
-
-        // printf("%p, %p, %p, %p, %p\n", &studentList[i], *oneStudent, oneStudent, &studentList, &studentList[i]->firstName);
-        // printf("%p, %p, %s, %s\n", &studentList[i], &studentList, &studentList[i]->firstName, &studentList[i]->lastName);
-
-    //     // printf("%d\n",i);
-    //     // int randVal = rand() % 10000 + 1;
-    //     // printf("%d\n", randVal);
-    //     // int val = 5;
-    //     // studentList[i]->studentId = 2;
-    //     // printf("%d, %d, %d\n", &studentList, &studentList[i], &studentList[i]->studentId);
-    //     // &studentList[i]->firstName = "moshiur";
-    //     // &studentList[i]->lastName = "howlader";
-    //     // &studentList[i]->gradeProj1 = 86;
-    //     // &studentList[i]->gradeProj2 = 94;
-    //     // &studentList[i]->gradeFinal = (&studentList[i]->gradeProj1 + &studentList[i]->gradeProj2)/2;
-
-    //     // printf("%d\n", &studentList[i]->firstName);
-
-        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
-        // printf("%i %s %s\n", temp1, temp2, temp3);
-
-        // fscanf(fptr,"%i %s %s", &temp1, temp2, temp3);
-        // printf("%i %s %s\n", temp1, temp2, temp3);
+        printf("%p, %p, %d, %s, %s\n", &(studentList[i]), &oneStudent, studentList[i]->studentId, studentList[i]->firstName, studentList[i]->lastName);
 
     }
-    
-    //student *pointer = *student1;
-    //student **data = &pointer;
-
-    // printf("%s", buff);
-    // fgets(buff,5,fptr);
-    // printf("%s\n", buff);
 
     fclose(fptr);     //doing free(fptr); works sometimes, other times a segmentation fault
 
     return studentList;
 }
 
+int find(int idNo, student **list, int size){
+    int foundIndex = -1;
+
+    for (size_t i = 0; i < size; i++)
+    {
+        if(list[i]->studentId == idNo){
+            foundIndex = i;
+            break;
+        }
+    }
+    
+    return foundIndex;
+}
+
+void input_grades( char *filename, student **list, int size){
+    //input grades data from *filename into **list
+    FILE *fptr;
+    int searchResult;
+    int idNo[size];
+    int projGrade1[size];
+    int projGrade2[size];
+    // int gradeData[size][3];     //size number of rows and 3 columns for idNo, projGrade1, and projGrade2
+    printf("Reading from file called: %s\n", filename);
+    #ifdef _WIN32
+        fptr = fopen(filename,"r"); //w+ for reading+writing
+    #elif __unix__
+        fptr = fopen(filename,"r"); //w+ for reading+writing
+    #else
+        printf("Other OS\n");
+    #endif
+
+    //iterate each entry in the grades filename
+    for (int i = 0; i < size; i++)
+    {
+        fscanf(fptr,"%d %d %d", &idNo[i], &projGrade1[i], &projGrade2[i]);
+        printf("loaded up data: %d, %d, %d\n", idNo[i], projGrade1[i], projGrade2[i]);
+        
+        searchResult = find(idNo[i], list, size);
+        if(searchResult != -1){
+            list[searchResult]->gradeProj1 = projGrade1[i];
+            list[searchResult]->gradeProj2 = projGrade2[i];
+            printf("Grades: %d %d\n", list[searchResult]->gradeProj1, list[searchResult]->gradeProj2);
+        }
+    }
+    
+}
+
+void compute_final_course_grades(student **list, int size){
+    //calloc() should have at least initialized the fields with 0
+    //so the function should still compute even if the input_grades() hasn't been called
+    //error checking and exception handling can be made but skipping this
+
+    for (size_t i = 0; i < size; i++)
+    {
+        list[i]->gradeFinal = (float)(list[i]->gradeProj1 + list[i]->gradeProj2)/2.0;
+    }
+    
+}
+
+void output_final_course_grades(char *filename, student **list, int size){
+    //output a new file called *filename with the student ID and the corresponding final grade
+    //assumes the list already has the data for the final grades populated
+    FILE *fptr;
+
+    // int gradeData[size][3];     //size number of rows and 3 columns for idNo, projGrade1, and projGrade2
+    printf("Writing student ID and final grade to a file called: %s\n", filename);
+    #ifdef _WIN32
+        fptr = fopen(filename,"w"); //w+ for reading+writing
+    #elif __unix__
+        fptr = fopen(filename,"w"); //w+ for reading+writing
+    #else
+        printf("Other OS\n");
+    #endif
+    
+    fprintf(fptr,"%d\n",size);
+
+    for (size_t i = 0; i < size; i++)
+    {
+        if(i==size-1){
+            fprintf(fptr,"%d %f", list[i]->studentId, list[i]->gradeFinal);
+        }else{
+            fprintf(fptr,"%d %f\n", list[i]->studentId, list[i]->gradeFinal);
+        }
+    }
+
+    fclose(fptr);
+
+}
+
+void print_list( student **list, int size){
+    for (size_t i = 0; i < size; i++)
+    {
+        printf("ID: %d, name: %s %s, project 1 grade: %d, project 2 grade: %d, final grade: %.2f\n", list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->gradeFinal);
+    }
+}
+
+void withdraw(int idNo, student **list, int *sizePtr){
+    //https://stackoverflow.com/questions/33170802/c-does-freeing-an-array-of-pointers-also-free-what-theyre-pointing-to
+    int searchResult = -1;
+        
+    searchResult = find(idNo, list, *sizePtr);
+    if(searchResult != -1){
+        //remove and deallocate the student from the list
+        
+        printf("------------------------------------------------------\n");
+        printf("Removing student ID = %d\n", idNo);
+        free(list[searchResult]);
+
+        for (size_t i = searchResult; i < *sizePtr-1; i++)
+        {
+            list[i] = list[i+1];
+        }
+        
+        //pointer xD: https://stackoverflow.com/questions/8208021/how-to-increment-a-pointer-address-and-pointers-value
+        (*sizePtr)--;
+
+        for (size_t i = 0; i < *sizePtr; i++)
+        {
+            printf("%d %d %d %d %s %s %f\n", list[i]->studentId, list[i]->gradeProj1, list[i]->gradeProj2, list[i]->studentId, list[i]->firstName, list[i]->lastName, list[i]->gradeFinal);
+        }
+
+
+
+
+        printf("size is: %d\n", *sizePtr);
+        
+    }else{
+        printf("The student with ID=%d does not exist in the list.\n", idNo);
+    }
+
+}
+
+
 //to be completedd
 void practiceSyntax(){
     printf("Hello World :)!\n");
-   student stud1;
-   student studentList[100];
+    student stud1;
+    student studentList[100];
 
     // not allowed cuz memory allocation and stuff
     // stud1.firstName = "moshiur";
