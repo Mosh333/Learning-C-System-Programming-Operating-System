@@ -17,3 +17,12 @@ Install gdb with:
 $sudo apt-get update
 $sudo apt-get install gdb
 ```
+
+
+Mac OS Systems:
+
+The run_database.sh doesn't seem to work (perhaps the file ownership when I git clone?).
+Anyways just do:
+```
+$ clear; gcc -g ./src/main.c -o main; ./main;
+```
