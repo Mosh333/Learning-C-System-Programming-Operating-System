@@ -24,6 +24,8 @@ struct student **create_class_list(char *filename, int *sizePtr){
         fptr = fopen(filename,"r"); //w+ for reading+writing
     #elif __unix__
         fptr = fopen(filename,"r"); //w+ for reading+writing
+    #elif __APPLE__
+        fptr = fopen(filename,"r"); //w+ for reading+writing
     #else
         printf("Other OS\n");
     #endif
@@ -90,6 +92,8 @@ void input_grades( char *filename, student **list, int size){
         fptr = fopen(filename,"r"); //w+ for reading+writing
     #elif __unix__
         fptr = fopen(filename,"r"); //w+ for reading+writing
+    #elif __APPLE__
+        fptr = fopen(filename,"r"); //w+ for reading+writing
     #else
         printf("Other OS\n");
     #endif
@@ -132,6 +136,8 @@ void output_final_course_grades(char *filename, student **list, int size){
     #ifdef _WIN32
         fptr = fopen(filename,"w"); //w+ for reading+writing
     #elif __unix__
+        fptr = fopen(filename,"w"); //w+ for reading+writing
+    #elif __APPLE__
         fptr = fopen(filename,"w"); //w+ for reading+writing
     #else
         printf("Other OS\n");
