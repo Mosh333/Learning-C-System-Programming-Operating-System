@@ -1,0 +1,8 @@
+7
+zebra
+cat
+rat
+dog
+aardvark
+baboon
+ape

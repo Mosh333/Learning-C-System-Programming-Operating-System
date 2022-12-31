@@ -1,0 +1,34 @@
+$ ./sortExc
+Hello World!
+-935406216
+Reading from file called: words.txt
+7
+-935406212
+Reading from file called: words.txt 
+7
+result of mystrcmp(zebra,cat), 1    
+Initial array in sort_words(): zebra
+Initial array in sort_words(): cat
+Initial array in sort_words(): rat
+Initial array in sort_words(): dog
+Initial array in sort_words(): aardvark
+Initial array in sort_words(): baboon
+Initial array in sort_words(): ape
+Using insertion sort!
+a a 97 97
+Post insertion sort_words() call: aardvark
+Post insertion sort_words() call: ape
+Post insertion sort_words() call: baboon
+Post insertion sort_words() call: cat
+Post insertion sort_words() call: dog
+Post insertion sort_words() call: rat
+Post insertion sort_words() call: zebra
+Using bubble sort!
+a a 97 97
+Post bubble sort2_words() call: aardvark
+Post bubble sort2_words() call: ape
+Post bubble sort2_words() call: baboon
+Post bubble sort2_words() call: cat
+Post bubble sort2_words() call: dog
+Post bubble sort2_words() call: rat
+Post bubble sort2_words() call: zebra
