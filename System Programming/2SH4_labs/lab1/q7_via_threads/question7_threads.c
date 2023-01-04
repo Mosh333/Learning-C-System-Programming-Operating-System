@@ -4,6 +4,8 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <omp.h>
+#define my_m_value 1000 //preprocessor directive approach to initialize value
+#define NUM_THREADS 10
 
 struct thread_worker_data
 {
