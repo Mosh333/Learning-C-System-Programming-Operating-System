@@ -25,7 +25,7 @@ Lesson Learned: The program is not wrong if the user inputs incorrect values
 5 0 1 1 1 1        -> 4 1 0 1 0                                       PASS
 2 0 4              -> 4 1 1 1 1                                       PASS
 4 1 1 1 1          -> 4 0 1 0 1                                       PASS
-1 4                -> 4 0 0 0 0                                       TBD d
+1 4                -> 4 0 0 0 0                                       PASS
 Lesson Learned: The program is not wrong if the user inputs incorrect values
 */
 
