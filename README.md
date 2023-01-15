@@ -15,7 +15,7 @@ Main motivation to cover this materials is to build a stronger foundation in Com
 List of things done to learn System Programming (in C):
 <br>
 - Redo CoE 2SH4 Labs
-    - Status: Labs 3/5 complete (labs in C programming is complete)
+    - Status: Labs 3/5 complete (labs in C programming is complete, 2 labs in Java to be completed)
 - Start with going over lecture notes for [Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
     - Status: Not Started
 - Work on the exerd[Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
@@ -24,7 +24,9 @@ List of things done to learn System Programming (in C):
     - Status: Not Started
 
 ## Operating Systems
-To be done in C   
+To be done in C
+- Redo SoE 3SH3 Labs
+    - Status: Labs 0/5 complete
 Section yet to be 🚧   
 - [An Operating System Course you can get certificate for](https://learn.saylor.org/course/view.php?id=94)
 - Then move on to practical C programming exercises for OS related topics (POSIX related System programming and IPC programming)!
