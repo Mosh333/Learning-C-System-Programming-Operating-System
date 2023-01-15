@@ -18,7 +18,7 @@ List of things done to learn System Programming (in C):
     - Status: Labs 3/5 complete (labs in C programming is complete, 2 labs in Java to be completed)
 - Start with going over lecture notes for [Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
     - Status: Not Started
-May skip the below for now in favour of getting SoE 3SH3 out of the way first
+- May skip the below for now in favour of getting SoE 3SH3 out of the way first
 - Work on the exerd[Prof. Anton's System Programming Course](https://www.inf.usi.ch/carzaniga/edu/sysprog21f/)
     - Status: Not Started
 - Do the Rutgers's Programming Assignments:
