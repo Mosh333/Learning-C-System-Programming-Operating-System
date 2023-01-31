@@ -1,0 +1,405 @@
+        if(this.setSize==0 && s.setSize!=0){
+            if(s.setSize==1){
+                sortedUniqueElem[0] = s.headNode.value;
+                return new SLLSet(sortedUniqueElem);
+            }else if(s.setSize>1){
+                while(sPointer.next != null){
+                    sortedUniqueElem[sCounter] = sPointer.value; 
+                    sCounter++;
+                    sPointer=sPointer.next;
+                }
+                sortedUniqueElem[sCounter]=sPointer.value;
+                sCounter++;
+                return new SLLSet(sortedUniqueElem);
+            }
+
+        }
+        if(s.setSize==0 && this.setSize!=0){
+            if(this.setSize==1){
+                sortedUniqueElem[0] = this.headNode.value;
+                return new SLLSet(sortedUniqueElem);
+            }else if(this.setSize>1){
+                while(this.pointerNode.next != null){
+                    sortedUniqueElem[thisCounter] = thisPointer.value;
+                    thisCounter++;
+                    thisPointer=thisPointer.next;
+                }
+                sortedUniqueElem[thisCounter]=thisPointer.value;
+                thisCounter++;
+                return new SLLSet(sortedUniqueElem);
+            }
+        }
+
+        if(this.setSize==1){
+            
+        }
+        if(s.setSize==1){
+
+        }
+
+        while(this.thisPointer.next != null && sPointer.next != null){
+            //iterate one by one
+        }
+
+
+
+
+
+    public int countUnique(SLLSet s){
+        //count number of unique entries between 
+        // 1) SLLSet thisSet and
+        // 2) SLLSet s
+        int uniqueElem = this.setSize + s.setSize;
+        SLLNode thisPointer, sPointer;
+        thisPointer = this.headNode;
+        sPointer = s.headNode;
+        if(this.setSize>0 && s.setSize==0){
+            return this.setSize;
+        }
+
+        if(s.setSize>0 && this.setSize==0){
+            return s.setSize;
+        }
+
+        if(s.setSize==0 && this.setSize==0){
+            return 0;
+        }
+
+        //make sure we iterate through all the elements in the larger set
+        if(this.setSize>s.setSize){
+            while(thisPointer.next!=null){
+                // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+                if(thisPointer.value==sPointer.value){
+                    uniqueElem--;
+                    thisPointer = thisPointer.next;
+                    if(sPointer.next!=null){
+                        sPointer = sPointer.next;
+                    }
+                }else if(thisPointer.value<sPointer.value){
+                    thisPointer=thisPointer.next;
+                }else{
+                    if(sPointer.next!=null){
+                        sPointer=sPointer.next;
+                    }else{
+                        //sPointer at its limit, increment thisPointer to iterate
+                        thisPointer=thisPointer.next;                        
+                    }
+                    
+                }                
+            }
+            // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+            //at the very end, do a final comparison
+            if(thisPointer.value == sPointer.value){
+                uniqueElem--;
+            }
+        }else{
+            while(sPointer.next!=null){
+                // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+                if(thisPointer.value==sPointer.value){
+                    uniqueElem--;
+                    sPointer = sPointer.next;
+                    if(thisPointer.next!=null){
+                        thisPointer = thisPointer.next;
+                    }
+                }else if(sPointer.value<thisPointer.value){
+                    sPointer=sPointer.next;
+                }else{
+                    if(thisPointer.next!=null){
+                        thisPointer=thisPointer.next;
+                    }else{
+                        //thisPointer at its limit, increment sPointer to iterate
+                        sPointer=sPointer.next;
+                    }
+                }                
+            }
+            // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+            //at the very end, do a final comparison
+            if(thisPointer.value == sPointer.value){
+                uniqueElem--;
+            }
+        }
+
+        return uniqueElem;
+    }
+
+
+
+
+
+        if(this.setSize>s.setSize){
+            while(thisPointer.next!=null){
+                if(thisPointer.value==sPointer.value){
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer = thisPointer.next;
+                    if(sPointer.next!=null){
+                        sPointer = sPointer.next;
+                    }
+                }else if(thisPointer.value<sPointer.value){
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer=thisPointer.next;
+                }else{
+                    if(sPointer.next!=null){
+                        sortedUniqueElem[arrayCounter]=sPointer.value;
+                        arrayCounter++;
+                        sPointer=sPointer.next;
+                    }else{
+                        //sPointer at its limit, increment thisPointer to iterate
+                        sortedUniqueElem[arrayCounter]=thisPointer.value;
+                        arrayCounter++;
+                        thisPointer=thisPointer.next;                        
+                    }
+                    
+                }                   
+            }
+            //at the very end, do a final comparison
+            if(thisPointer.value == sPointer.value){
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }else if(thisPointer.value < sPointer.value){
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }else{
+                sortedUniqueElem[arrayCounter]=sPointer.value;
+                arrayCounter++;
+            }
+        }else{
+            while(sPointer.next!=null){
+                if(thisPointer.value==sPointer.value){
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer = sPointer.next;
+                    if(thisPointer.next!=null){
+                        thisPointer = thisPointer.next;
+                    }
+                }else if(sPointer.value<thisPointer.value){
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer=sPointer.next;
+                }else{
+                    if(thisPointer.next!=null){
+                        sortedUniqueElem[arrayCounter]=thisPointer.value;
+                        arrayCounter++;
+                        thisPointer=thisPointer.next;
+                    }else{
+                        //thisPointer at its limit, increment sPointer to iterate
+                        sortedUniqueElem[arrayCounter]=sPointer.value;
+                        arrayCounter++;
+                        sPointer=sPointer.next;
+                    }
+                }                
+            }
+            
+            //at the very end, do a final comparison
+            if(thisPointer.value == sPointer.value){
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }else if(sPointer.value < thisPointer.value){
+                sortedUniqueElem[arrayCounter]=sPointer.value;
+                arrayCounter++;
+            }else{
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }
+        }
+
+
+        while(!comparedLastTwoElems){
+            int x = thisPointer.value;
+            int y = sPointer.value;
+            System.out.println("X="+x+" and Y="+y+" ");
+            System.out.println("thisCounter="+thisCounter+" and sCounter="+sCounter+" this.setSize="+this.setSize+" and s.setSize="+s.setSize+" ");
+            if(thisCounter!=(this.setSize-1)){
+                thisPointer=thisPointer.next;
+                thisCounter++;
+            }
+            if(sCounter!=(s.setSize-1)){
+                sPointer=sPointer.next;
+                sCounter++;
+            }
+            if(thisCounter==(this.setSize-1) && thisArrivedEnd==false){
+                thisArrivedEnd=true;
+            }
+            if(sCounter==(s.setSize-1) && sArrivedEnd==false){
+                sArrivedEnd=true;
+            }
+            
+            if(thisArrivedEnd && sArrivedEnd){
+                System.out.println("Last X="+x+" and Y="+y+" ");
+                System.out.println("Last thisCounter="+thisCounter+" and sCounter="+sCounter+" this.setSize="+this.setSize+" and s.setSize="+s.setSize+" ");
+                System.out.println("thisPointer.value="+thisPointer.value);
+                System.out.println("sPointer.value="+sPointer.value);
+
+                comparedLastTwoElems=true;
+            }
+        }
+
+
+                if(thisPointer.value==sPointer.value){
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer = thisPointer.next;
+                    if(sPointer.next!=null){
+                        sPointer = sPointer.next;
+                    }
+                }else if(thisPointer.value<sPointer.value){
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer=thisPointer.next;
+                }else if(thisPointer.value>sPointer.value){
+                    if(sPointer.next!=null){
+                        sortedUniqueElem[arrayCounter]=sPointer.value;
+                        arrayCounter++;
+                        sPointer=sPointer.next;
+                    }else{
+                        //sPointer at its limit, increment thisPointer to iterate
+                        sortedUniqueElem[arrayCounter]=thisPointer.value;
+                        arrayCounter++;
+                        thisPointer=thisPointer.next;                        
+                    }
+                    
+                }
+
+
+        if(this.setSize>s.setSize){
+            while(thisPointer.next!=null && sPointer.next!=null){
+                // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+                if(thisPointer.value==sPointer.value){
+                    sortedUniqueElem[arrayCounter]=arrayCounter;
+                    arrayCounter++;
+                    thisPointer = thisPointer.next;
+                    if(sPointer.next!=null){
+                        sPointer = sPointer.next;
+                    }
+                }else if(thisPointer.value<sPointer.value){
+                    sortedUniqueElem[arrayCounter]=arrayCounter;
+                    arrayCounter++;
+                    thisPointer=thisPointer.next;
+                }else if(thisPointer.value>sPointer.value){
+                    sortedUniqueElem[arrayCounter]=arrayCounter;
+                    arrayCounter++;
+                    sPointer=sPointer.next; 
+                }
+            }
+            System.out.println("Last thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+            System.out.println("Last arrayCounter="+arrayCounter+" while countUnique="+countUnique);
+            //at the very end, do a final comparison
+            // if(thisPointer.value == sPointer.value){
+            //     sortedUniqueElem[arrayCounter]=thisPointer.value;
+            //     arrayCounter++;
+            // }else if(thisPointer.value > sPointer.value){
+            //     sortedUniqueElem[arrayCounter]=thisPointer.value;
+            //     arrayCounter++;
+            // }else{
+            //     sortedUniqueElem[arrayCounter]=sPointer.value;
+            //     arrayCounter++;
+            // }
+        }else if(s.setSize>this.setSize){
+            /*while(sPointer.next!=null && thisPointer.next!=null){
+                if(thisPointer.value==sPointer.value){
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer = sPointer.next;
+                }else if(sPointer.value<thisPointer.value){
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer=sPointer.next;
+                }else if(sPointer.value>thisPointer.value){
+                    if(thisPointer.next!=null){
+                        sortedUniqueElem[arrayCounter]=thisPointer.value;
+                        arrayCounter++;
+                        thisPointer=thisPointer.next;
+                    }else{
+                        //thisPointer at its limit, increment sPointer to iterate
+                        sortedUniqueElem[arrayCounter]=sPointer.value;
+                        arrayCounter++;
+                        sPointer=sPointer.next;
+                    }
+                }                
+            }
+            System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+            System.out.println("arrayCounter="+arrayCounter+" while countUnique="+countUnique);
+            //at the very end, do a final comparison
+            if(thisPointer.value == sPointer.value){
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }else if(sPointer.value > thisPointer.value){
+                sortedUniqueElem[arrayCounter]=sPointer.value;
+                arrayCounter++;
+            }else{
+                sortedUniqueElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+            }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                else if(thisPointer.value<sPointer.value){
+                // System.out.println("Branch B");
+
+                if(thisPointer.next!=null){
+                    // System.out.println("Branch B1");
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer = thisPointer.next;
+                    thisCounter++;
+                }else if(thisPointer.next==null && thisLastElemAdded==false){
+                    // System.out.println("Branch B2");
+                    // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+                    // System.out.println("sortedUniqueElem[arrayCounter]="+sortedUniqueElem[arrayCounter]);
+                    if(thisPointer.value==sortedUniqueElem[arrayCounter-1]){
+                        thisLastElemAdded=true;
+                    }else if(thisPointer.value>sortedUniqueElem[arrayCounter-1]){
+                        sortedUniqueElem[arrayCounter]=thisPointer.value;
+                        arrayCounter++;
+                        thisLastElemAdded=true;
+                    }
+                }else if(thisPointer.next==null && sPointer.next!=null){
+                    // System.out.println("Branch B3");
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer = sPointer.next;
+                    sCounter++;
+                }
+            }else if(sPointer.value<thisPointer.value){
+                // System.out.println("Branch C");
+                if(sPointer.next==null && sPointer.value==sortedUniqueElem[arrayCounter]){
+                    sLastElemAdded=true;
+                }
+                if(sPointer.next!=null){
+                    sortedUniqueElem[arrayCounter]=sPointer.value;
+                    arrayCounter++;
+                    sPointer = sPointer.next;
+                    sCounter++;
+                }else if(sPointer.next==null && sLastElemAdded==false){
+                    if(sPointer.value==sortedUniqueElem[arrayCounter-1]){
+                        sLastElemAdded=true;
+                    }else if(sPointer.value>sortedUniqueElem[arrayCounter-1]){
+                        sortedUniqueElem[arrayCounter]=sPointer.value;
+                        arrayCounter++;
+                        sLastElemAdded=true;
+                    }
+                }else if(sPointer.next==null && thisPointer.next!=null){
+                    sortedUniqueElem[arrayCounter]=thisPointer.value;
+                    arrayCounter++;
+                    thisPointer = thisPointer.next;
+                    thisCounter++;                    
+                }
+            }

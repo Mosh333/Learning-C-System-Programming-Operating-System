@@ -136,7 +136,8 @@ public class TestSLL {
         System.out.println("Difference value count between {1,5} and {2,3} is: "+count1aList.countDifference(count1bList));
         System.out.println("Union of {1,5} and {2,3} is: "+count1aList.union(count1bList).toString());
         System.out.println("Union of {1,5} and {2,3} is: {"+count1aList.union(count1bList).toString()+"}");
-        System.out.println("Union of {2,3} and {1,5} is: {"+count1bList.union(count1aList).toString()+"}");
+        System.out.println("Intersect of {1,5} and {2,3} is: "+count1aList.intersection(count1bList).toString());
+        System.out.println("Intersect of {1,5} and {2,3} is: {"+count1aList.intersection(count1bList).toString()+"}");
         System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         
 
@@ -150,6 +151,8 @@ public class TestSLL {
         System.out.println("Difference value count between {-5,-2,-1,0,1,5} and {0,1} is: "+count2aList.countDifference(count2bList));
         System.out.println("Union of {-5,-2,-1,0,1,5} and {0,1} is: {"+count2aList.union(count2bList).toString()+"}");
         System.out.println("Union of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.union(count2aList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {0,1} is: {"+count2aList.intersection(count2bList).toString()+"}");
+        System.out.println("Intersect of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.intersection(count2aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -162,6 +165,8 @@ public class TestSLL {
         System.out.println("Difference value count between {0} and {1} is: "+count3aList.countDifference(count3bList));
         System.out.println("Union of {1} and {0} is: {"+count3aList.union(count3bList).toString()+"}");
         System.out.println("Union of {0} and {1} is: {"+count3bList.union(count3aList).toString()+"}");
+        System.out.println("Intersect of {1} and {0} is: {"+count3aList.intersection(count3bList).toString()+"}");
+        System.out.println("Intersect of {0} and {1} is: {"+count3bList.intersection(count3aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -174,6 +179,8 @@ public class TestSLL {
         System.out.println("Difference value count between {} and {1} is: "+count4aList.countDifference(count4bList));
         System.out.println("Union of {1} and {} is: {"+count4aList.union(count4bList).toString()+"}");
         System.out.println("Union of {} and {1} is: {"+count4bList.union(count4aList).toString()+"}");
+        System.out.println("Intersect of {1} and {} is: {"+count4aList.intersection(count4bList).toString()+"}");
+        System.out.println("Intersect of {} and {1} is: {"+count4bList.intersection(count4aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -186,6 +193,8 @@ public class TestSLL {
         System.out.println("Difference value count between {1} and {} is: "+count5aList.countDifference(count5bList));
         System.out.println("Union of {} and {1} is: {"+count5aList.union(count5bList).toString()+"}");
         System.out.println("Union of {1} and {} is: {"+count5bList.union(count5aList).toString()+"}");
+        System.out.println("Intersect of {} and {1} is: {"+count5aList.intersection(count5bList).toString()+"}");
+        System.out.println("Intersect of {1} and {} is: {"+count5bList.intersection(count5aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
@@ -198,6 +207,8 @@ public class TestSLL {
         System.out.println("Difference value count between {} and {} is: "+count6aList.countDifference(count6bList));
         System.out.println("Union of {} and {} is: {"+count6aList.union(count6bList).toString()+"}");
         System.out.println("Union of {} and {} is: {"+count6bList.union(count6aList).toString()+"}");
+        System.out.println("Intersect of {} and {} is: {"+count6aList.intersection(count6bList).toString()+"}");
+        System.out.println("Intersect of {} and {} is: {"+count6bList.intersection(count6aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -210,6 +221,8 @@ public class TestSLL {
         System.out.println("Difference value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: "+count7aList.countDifference(count7bList));
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7aList.union(count7bList).toString()+"}");
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.union(count7aList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7aList.intersection(count7bList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.intersection(count7aList).toString()+"}");
         System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         
         System.out.println("*********************************************************************");
@@ -225,6 +238,8 @@ public class TestSLL {
         System.out.println("Difference value count should be 1");
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count8aList.union(count8bList).toString()+"}");
         System.out.println("Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.union(count8aList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count8aList.intersection(count8bList).toString()+"}");
+        System.out.println("Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.intersection(count8aList).toString()+"}");
         System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         
         System.out.println("*********************************************************************");
@@ -240,6 +255,8 @@ public class TestSLL {
         System.out.println("Difference value count should be 8");
         System.out.println("Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count9aList.union(count9bList).toString()+"}");
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.union(count9aList).toString()+"}");
+        System.out.println("Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count9aList.intersection(count9bList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.intersection(count9aList).toString()+"}");
         System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         
         System.out.println("*********************************************************************");
@@ -255,6 +272,8 @@ public class TestSLL {
         System.out.println("Difference value count should be 6");
         System.out.println("Union of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count10aList.union(count10bList).toString()+"}");
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.union(count10aList).toString()+"}");
+        System.out.println("Intersect of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count10aList.intersection(count10bList).toString()+"}");
+        System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.intersection(count10aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
@@ -272,6 +291,8 @@ public class TestSLL {
         System.out.println("Difference value count should be 3");
         System.out.println("Union of {3,8,14,15} and {2,8,9,15,100} is: {"+count11aList.union(count11bList).toString()+"}");
         System.out.println("Union of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.union(count11aList).toString()+"}");
+        System.out.println("Intersect of {3,8,14,15} and {2,8,9,15,100} is: {"+count11aList.intersection(count11bList).toString()+"}");
+        System.out.println("Intersect of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.intersection(count11aList).toString()+"}");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -285,6 +306,8 @@ public class TestSLL {
         System.out.println("Union of {1,5,7} and {2,3,4,5} is: "+count12aList.union(count12bList).toString());
         System.out.println("Union of {1,5,7} and {2,3,4,5} is: {"+count12aList.union(count12bList).toString()+"}");
         System.out.println("Union of {2,3,4,5} and {1,5,7} is: {"+count12bList.union(count12aList).toString()+"}");
+        System.out.println("Intersect of {1,5,7} and {2,3,4,5} is: {"+count12aList.intersection(count12bList).toString()+"}");
+        System.out.println("Intersect of {2,3,4,5} and {1,5,7} is: {"+count12bList.intersection(count12aList).toString()+"}");
         System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         /*
         //demonstrating basics mechanics of adding elements to a linked list

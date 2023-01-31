@@ -458,44 +458,44 @@ public class SLLSet {
         int x=0,y=0;
         //having issues with while(node.next!=null) logic, migrating to setSize to implement logic
         while((thisCounter+sCounter)!=(thisHop+sHop)){
-            x = thisCounter+sCounter;
-            y = thisHop+sHop;
-            System.out.println("(thisCounter+sCounter)="+x+" and (thisHop+sHop)="+y);
-            System.out.println("sortedUniqueElem is:"+Arrays.toString(sortedUniqueElem));
-            System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+            // x = thisCounter+sCounter;
+            // y = thisHop+sHop;
+            // System.out.println("(thisCounter+sCounter)="+x+" and (thisHop+sHop)="+y);
+            // System.out.println("sortedUniqueElem is:"+Arrays.toString(sortedUniqueElem));
+            // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
             if(thisPointer.value==sPointer.value){
-                System.out.println("Branch A");
+                // System.out.println("Branch A");
                 sortedUniqueElem[arrayCounter]=thisPointer.value;
                 arrayCounter++;
                 
                 if(thisPointer.next!=null && sPointer.next!=null){
-                    System.out.println("Branch A1");
+                    // System.out.println("Branch A1");
                     thisPointer = thisPointer.next;
                     sPointer = sPointer.next;
                     thisCounter++;
                     sCounter++;
                 }else if(thisPointer.next!=null && sPointer.next==null){
-                    System.out.println("Branch A2");
+                    // System.out.println("Branch A2");
                     thisPointer = thisPointer.next;
                     thisCounter++;
                 }else if(thisPointer.next==null && sPointer.next!=null){
-                    System.out.println("Branch A3");
+                    // System.out.println("Branch A3");
                     sPointer = sPointer.next;
                     sCounter++;
                 }
             }else if(thisPointer.value<sPointer.value){
-                System.out.println("Branch B");
+                // System.out.println("Branch B");
 
                 if(thisPointer.next!=null){
-                    System.out.println("Branch B1");
+                    // System.out.println("Branch B1");
                     sortedUniqueElem[arrayCounter]=thisPointer.value;
                     arrayCounter++;
                     thisPointer = thisPointer.next;
                     thisCounter++;
                 }else if(thisPointer.next==null && thisLastElemAdded==false){
-                    System.out.println("Branch B2");
-                    System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
-                    System.out.println("sortedUniqueElem[arrayCounter]="+sortedUniqueElem[arrayCounter]);
+                    // System.out.println("Branch B2");
+                    // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+                    // System.out.println("sortedUniqueElem[arrayCounter]="+sortedUniqueElem[arrayCounter]);
                     if(thisPointer.value==sortedUniqueElem[arrayCounter-1]){
                         thisLastElemAdded=true;
                     }else if(thisPointer.value>sortedUniqueElem[arrayCounter-1]){
@@ -504,14 +504,14 @@ public class SLLSet {
                         thisLastElemAdded=true;
                     }
                 }else if(thisPointer.next==null && sPointer.next!=null){
-                    System.out.println("Branch B3");
+                    // System.out.println("Branch B3");
                     sortedUniqueElem[arrayCounter]=sPointer.value;
                     arrayCounter++;
                     sPointer = sPointer.next;
                     sCounter++;
                 }
             }else if(sPointer.value<thisPointer.value){
-                System.out.println("Branch C");
+                // System.out.println("Branch C");
                 if(sPointer.next==null && sPointer.value==sortedUniqueElem[arrayCounter]){
                     sLastElemAdded=true;
                 }
@@ -561,9 +561,9 @@ public class SLLSet {
                 if(thisPointer.value==sPointer.value){
                     sortedUniqueElem[sortedUniqueElem.length-1]=thisPointer.value;
                 }
-                x = thisCounter+sCounter;
-                y = thisHop+sHop;
-                System.out.println("Exiting loop: (thisCounter+sCounter)="+x+" and (thisHop+sHop)="+y);
+                // x = thisCounter+sCounter;
+                // y = thisHop+sHop;
+                // System.out.println("Exiting loop: (thisCounter+sCounter)="+x+" and (thisHop+sHop)="+y);
             }
             // maxIter--;
             // if(maxIter==0){
@@ -577,20 +577,93 @@ public class SLLSet {
         }
 
 
-        System.out.println("Am I out this loop?");
-        System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
+        // System.out.println("Am I out this loop?");
+        // System.out.println("thisPointer.value="+thisPointer.value+" and sPointer.value="+sPointer.value);
 
-        System.out.println("sortedUniqueElem is:"+Arrays.toString(sortedUniqueElem));
+        // System.out.println("sortedUniqueElem is:"+Arrays.toString(sortedUniqueElem));
         
         unionSet = new SLLSet(sortedUniqueElem);
         return unionSet;
     }
 
     public SLLSet intersection(SLLSet s){
+        //Return the intersection of:
+        // 1) SLLSet thisSet and
+        // 2) SLLSet s        
         SLLSet intersectSet = null;
-        int[] sortedUniqueElem = new int[countCommon(s)];
-        //to do
+        SLLNode thisPointer, sPointer;
+        
+        //below are the respective counters
+        int thisCounter =0, sCounter=0;
+        int thisHop = this.setSize-1;
+        int sHop = s.setSize-1;
 
+        //below are the respective counters
+        int arrayCounter = 0;
+        int countCommon = countCommon(s);
+        int[] sortedIntersectElem = new int[countCommon(s)];
+
+        boolean thisLastElemAdded = false;
+        boolean sLastElemAdded = false;
+
+        //this.SLLSet starts with this.headNode
+        //s starts with s.headNode
+        thisPointer = this.headNode;
+        sPointer = s.headNode;
+
+        if(this.setSize==0 || s.setSize==0){
+            return new SLLSet();
+        }
+
+        while((thisCounter+sCounter)!=(thisHop+sHop)){
+            // int x = thisCounter+sCounter;
+            // int y = thisHop+sHop;
+            // System.out.println("(thisCounter+sCounter)="+x+" and (thisHop+sHop)="+y);
+            if(thisPointer.value==sPointer.value){
+                sortedIntersectElem[arrayCounter]=thisPointer.value;
+                arrayCounter++;
+                
+                if(thisPointer.next!=null && sPointer.next!=null){
+                    // System.out.println("Branch A1");
+                    thisPointer = thisPointer.next;
+                    sPointer = sPointer.next;
+                    thisCounter++;
+                    sCounter++;
+                }else if(thisPointer.next!=null && sPointer.next==null){
+                    // System.out.println("Branch A2");
+                    thisPointer = thisPointer.next;
+                    thisCounter++;
+                }else if(thisPointer.next==null && sPointer.next!=null){
+                    // System.out.println("Branch A3");
+                    sPointer = sPointer.next;
+                    sCounter++;
+                }
+            }else if(thisPointer.value<sPointer.value){
+                if(thisPointer.next!=null){
+                    thisPointer = thisPointer.next;
+                    thisCounter++;
+                }else if(thisPointer.next==null && sPointer.next!=null){
+                    sPointer = sPointer.next;
+                    sCounter++;
+                }
+            }else if(sPointer.value<thisPointer.value){
+                if(sPointer.next!=null){
+                    sPointer = sPointer.next;
+                    sCounter++;
+                }else if(sPointer.next==null && thisPointer.next!=null){
+                    thisPointer = thisPointer.next;
+                    thisCounter++;
+                }
+            }
+        }
+
+        if(thisPointer.next==null && sPointer.next==null){
+            if(thisPointer.value==sPointer.value){
+                sortedIntersectElem[sortedIntersectElem.length-1]=thisPointer.value;
+            }
+        }
+
+        intersectSet = new SLLSet(sortedIntersectElem);
         return intersectSet;
     }
 
