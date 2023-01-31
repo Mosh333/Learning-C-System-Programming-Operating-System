@@ -125,6 +125,168 @@ public class TestSLL {
         list12.remove(5);
         System.out.println("list12 now is: ["+list12.toString()+"] has size of "+list12.getSize());
 
+        
+        System.out.println("*********************************************************************");
+        int[] count1aArr ={1,5};
+        int[] count1bArr ={2,3};
+        SLLSet count1aList = new SLLSet(count1aArr);
+        SLLSet count1bList = new SLLSet(count1bArr);
+        System.out.println("Unique value count between {1,5} and {2,3} is: "+count1aList.countUnique(count1bList));
+        System.out.println("Common value count between {1,5} and {2,3} is: "+count1aList.countCommon(count1bList));
+        System.out.println("Difference value count between {1,5} and {2,3} is: "+count1aList.countDifference(count1bList));
+        System.out.println("Union of {1,5} and {2,3} is: "+count1aList.union(count1bList).toString());
+        System.out.println("Union of {1,5} and {2,3} is: {"+count1aList.union(count1bList).toString()+"}");
+        System.out.println("Union of {2,3} and {1,5} is: {"+count1bList.union(count1aList).toString()+"}");
+        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        
+
+        System.out.println("*********************************************************************");
+        int[] count2aArr ={-5,-2,-1,0,1,5};
+        int[] count2bArr ={0,1};
+        SLLSet count2aList = new SLLSet(count2aArr);
+        SLLSet count2bList = new SLLSet(count2bArr);
+        System.out.println("Unique value count between {-5,-2,-1,0,1,5} and {0,1} is: "+count2aList.countUnique(count2bList));
+        System.out.println("Common value count between {-5,-2,-1,0,1,5} and {0,1} is: "+count2aList.countCommon(count2bList));
+        System.out.println("Difference value count between {-5,-2,-1,0,1,5} and {0,1} is: "+count2aList.countDifference(count2bList));
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {0,1} is: {"+count2aList.union(count2bList).toString()+"}");
+        System.out.println("Union of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.union(count2aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+
+        System.out.println("*********************************************************************");
+        int[] count3aArr ={1};
+        int[] count3bArr ={0};
+        SLLSet count3aList = new SLLSet(count3aArr);
+        SLLSet count3bList = new SLLSet(count3bArr);
+        System.out.println("Unique value count between {0} and {1} is: "+count3aList.countUnique(count3bList));
+        System.out.println("Common value count between {0} and {1} is: "+count3aList.countCommon(count3bList));
+        System.out.println("Difference value count between {0} and {1} is: "+count3aList.countDifference(count3bList));
+        System.out.println("Union of {1} and {0} is: {"+count3aList.union(count3bList).toString()+"}");
+        System.out.println("Union of {0} and {1} is: {"+count3bList.union(count3aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+
+        System.out.println("*********************************************************************");
+        int[] count4aArr ={1};
+        int[] count4bArr ={};
+        SLLSet count4aList = new SLLSet(count4aArr);
+        SLLSet count4bList = new SLLSet(count4bArr);
+        System.out.println("Unique value count between {} and {1} is: "+count4aList.countUnique(count4bList));
+        System.out.println("Common value count between {} and {1} is: "+count4aList.countCommon(count4bList));
+        System.out.println("Difference value count between {} and {1} is: "+count4aList.countDifference(count4bList));
+        System.out.println("Union of {1} and {} is: {"+count4aList.union(count4bList).toString()+"}");
+        System.out.println("Union of {} and {1} is: {"+count4bList.union(count4aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+
+        System.out.println("*********************************************************************");
+        int[] count5aArr ={};
+        int[] count5bArr ={1};
+        SLLSet count5aList = new SLLSet(count5aArr);
+        SLLSet count5bList = new SLLSet(count5bArr);
+        System.out.println("Unique value count between {1} and {} is: "+count5aList.countUnique(count5bList));
+        System.out.println("Common value count between {1} and {} is: "+count5aList.countCommon(count5bList));
+        System.out.println("Difference value count between {1} and {} is: "+count5aList.countDifference(count5bList));
+        System.out.println("Union of {} and {1} is: {"+count5aList.union(count5bList).toString()+"}");
+        System.out.println("Union of {1} and {} is: {"+count5bList.union(count5aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+        
+        System.out.println("*********************************************************************");
+        int[] count6aArr ={};
+        int[] count6bArr ={};
+        SLLSet count6aList = new SLLSet(count6aArr);
+        SLLSet count6bList = new SLLSet(count6bArr);
+        System.out.println("Unique value count between {} and {} is: "+count6aList.countUnique(count6bList));
+        System.out.println("Common value count between {} and {} is: "+count6aList.countCommon(count6bList));
+        System.out.println("Difference value count between {} and {} is: "+count6aList.countDifference(count6bList));
+        System.out.println("Union of {} and {} is: {"+count6aList.union(count6bList).toString()+"}");
+        System.out.println("Union of {} and {} is: {"+count6bList.union(count6aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+
+        System.out.println("*********************************************************************");
+        int[] count7aArr ={-5,-2,-1,0,1,5};
+        int[] count7bArr ={-5,-2,-1,0,1,5};
+        SLLSet count7aList = new SLLSet(count7aArr);
+        SLLSet count7bList = new SLLSet(count7bArr);
+        System.out.println("Unique value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: "+count7aList.countUnique(count7bList));
+        System.out.println("Common value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: "+count7aList.countCommon(count7bList));
+        System.out.println("Difference value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: "+count7aList.countDifference(count7bList));
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7aList.union(count7bList).toString()+"}");
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.union(count7aList).toString()+"}");
+        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        
+        System.out.println("*********************************************************************");
+        int[] count8aArr ={-5,-2,-1,0,1,5};
+        int[] count8bArr ={-100, -24, -7, 2, 5, 6, 8, 25};
+        SLLSet count8aList = new SLLSet(count8aArr);
+        SLLSet count8bList = new SLLSet(count8bArr);
+        System.out.println("Unique value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: "+count8aList.countUnique(count8bList));
+        System.out.println("Unique value count should be 13");
+        System.out.println("Common value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: "+count8aList.countCommon(count8bList));
+        System.out.println("Common value count should be 1");
+        System.out.println("Difference value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: "+count8aList.countDifference(count8bList));
+        System.out.println("Difference value count should be 1");
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count8aList.union(count8bList).toString()+"}");
+        System.out.println("Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.union(count8aList).toString()+"}");
+        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        
+        System.out.println("*********************************************************************");
+        int[] count9aArr ={-100, -24, -7, 2, 5, 6, 8, 25};
+        int[] count9bArr ={-5,-2,-1,0,1,5};
+        SLLSet count9aList = new SLLSet(count9aArr);
+        SLLSet count9bList = new SLLSet(count9bArr);
+        System.out.println("Unique value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count9aList.countUnique(count9bList));
+        System.out.println("Unique value count should be 13");
+        System.out.println("Common value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count9aList.countCommon(count9bList));
+        System.out.println("Common value count should be 1");
+        System.out.println("Difference value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count9aList.countDifference(count9bList));
+        System.out.println("Difference value count should be 8");
+        System.out.println("Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count9aList.union(count9bList).toString()+"}");
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.union(count9aList).toString()+"}");
+        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        
+        System.out.println("*********************************************************************");
+        int[] count10aArr ={-100, -7, -5, -2, 0, 4, 6, 8, 25};
+        int[] count10bArr ={-5,-2,-1,0,1,5};
+        SLLSet count10aList = new SLLSet(count10aArr);
+        SLLSet count10bList = new SLLSet(count10bArr);
+        System.out.println("Unique value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count10aList.countUnique(count10bList));
+        System.out.println("Unique value count should be 12");
+        System.out.println("Common value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count10aList.countCommon(count10bList));
+        System.out.println("Common value count should be 3");
+        System.out.println("Difference value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: "+count10aList.countDifference(count10bList));
+        System.out.println("Difference value count should be 6");
+        System.out.println("Union of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count10aList.union(count10bList).toString()+"}");
+        System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.union(count10aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+        
+        System.out.println("*********************************************************************");
+        int[] count11aArr ={3,8,14,15};
+        int[] count11bArr ={2,8,9,15,100};
+        SLLSet count11aList = new SLLSet(count11aArr);
+        SLLSet count11bList = new SLLSet(count11bArr);
+        System.out.println("Unique value count between {3,8,14,15} and {2,8,9,15,100} is: "+count11aList.countUnique(count11bList));
+        System.out.println("Unique value count should be 7");
+        System.out.println("Common value count between {3,8,14,15} and {2,8,9,15,100} is: "+count11aList.countCommon(count11bList));
+        System.out.println("Common value count should be 1");
+        System.out.println("Difference value count between {3,8,14,15} and {2,8,9,15,100} is: "+count11aList.countDifference(count11bList));
+        System.out.println("Difference value count should be 2");
+        System.out.println("Difference value count between {2,8,9,15,100} and {3,8,14,15} is: "+count11bList.countDifference(count11aList));
+        System.out.println("Difference value count should be 3");
+        System.out.println("Union of {3,8,14,15} and {2,8,9,15,100} is: {"+count11aList.union(count11bList).toString()+"}");
+        System.out.println("Union of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.union(count11aList).toString()+"}");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+
+        System.out.println("*********************************************************************");
+        int[] count12aArr ={1,5,7};
+        int[] count12bArr ={2,3,4,5};
+        SLLSet count12aList = new SLLSet(count12aArr);
+        SLLSet count12bList = new SLLSet(count12bArr);
+        System.out.println("Unique value count between {1,5,7} and {2,3,4,5} is: "+count12aList.countUnique(count12bList));
+        System.out.println("Common value count between {1,5,7} and {2,3,4,5} is: "+count12aList.countCommon(count12bList));
+        System.out.println("Difference value count between {1,5,7} and {2,3,4,5} is: "+count12aList.countDifference(count12bList));
+        System.out.println("Union of {1,5,7} and {2,3,4,5} is: "+count12aList.union(count12bList).toString());
+        System.out.println("Union of {1,5,7} and {2,3,4,5} is: {"+count12aList.union(count12bList).toString()+"}");
+        System.out.println("Union of {2,3,4,5} and {1,5,7} is: {"+count12bList.union(count12aList).toString()+"}");
+        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        /*
         //demonstrating basics mechanics of adding elements to a linked list
         int[] arr0 = {1,2,3,4};
         SLLNode node0, node1, node2, node3;
@@ -149,6 +311,6 @@ public class TestSLL {
             if(iterNode.next==null){
                 System.out.print(iterNode.value);
             }
-        }
+        }*/
     }
 }
