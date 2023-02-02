@@ -136,11 +136,14 @@ public class TestSLL {
         System.out.println("Difference value count between {1,5} and {2,3} is: "+count1aList.countDifference(count1bList));
         System.out.println("Union of {1,5} and {2,3} is: "+count1aList.union(count1bList).toString());
         System.out.println("Union of {1,5} and {2,3} is: {"+count1aList.union(count1bList).toString()+"}");
-        System.out.println("Intersect of {1,5} and {2,3} is: "+count1aList.intersection(count1bList).toString());
         System.out.println("Intersect of {1,5} and {2,3} is: {"+count1aList.intersection(count1bList).toString()+"}");
-        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Intersect of {1,5} and {2,3} is: {"+count1aList.intersection(count1bList).toString()+"}");
+        System.out.println("Difference of {1,5} and {2,3} is: {"+count1aList.difference(count1bList).toString()+"}");
+        System.out.println("Difference of {2,3} and {1,5} is: {"+count1bList.difference(count1aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
-
+        
         System.out.println("*********************************************************************");
         int[] count2aArr ={-5,-2,-1,0,1,5};
         int[] count2bArr ={0,1};
@@ -153,8 +156,12 @@ public class TestSLL {
         System.out.println("Union of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.union(count2aList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {0,1} is: {"+count2aList.intersection(count2bList).toString()+"}");
         System.out.println("Intersect of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.intersection(count2aList).toString()+"}");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {0,1} is: {"+count2aList.difference(count2bList).toString()+"}");
+        System.out.println("Difference of {0,1} and {-5,-2,-1,0,1,5} is: {"+count2bList.difference(count2aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
+        
         System.out.println("*********************************************************************");
         int[] count3aArr ={1};
         int[] count3bArr ={0};
@@ -167,6 +174,9 @@ public class TestSLL {
         System.out.println("Union of {0} and {1} is: {"+count3bList.union(count3aList).toString()+"}");
         System.out.println("Intersect of {1} and {0} is: {"+count3aList.intersection(count3bList).toString()+"}");
         System.out.println("Intersect of {0} and {1} is: {"+count3bList.intersection(count3aList).toString()+"}");
+        System.out.println("Difference of {1} and {0} is: {"+count3aList.difference(count3bList).toString()+"}");
+        System.out.println("Difference of {0} and {1} is: {"+count3bList.difference(count3aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -174,13 +184,17 @@ public class TestSLL {
         int[] count4bArr ={};
         SLLSet count4aList = new SLLSet(count4aArr);
         SLLSet count4bList = new SLLSet(count4bArr);
-        System.out.println("Unique value count between {} and {1} is: "+count4aList.countUnique(count4bList));
-        System.out.println("Common value count between {} and {1} is: "+count4aList.countCommon(count4bList));
-        System.out.println("Difference value count between {} and {1} is: "+count4aList.countDifference(count4bList));
+        System.out.println("Unique value count between {1} and {} is: "+count4aList.countUnique(count4bList));
+        System.out.println("Common value count between {1} and {} is: "+count4aList.countCommon(count4bList));
+        System.out.println("Difference value count between {1} and {} is: "+count4aList.countDifference(count4bList));
+        System.out.println("Difference value count between {} and {1} is: "+count4bList.countDifference(count4aList));
         System.out.println("Union of {1} and {} is: {"+count4aList.union(count4bList).toString()+"}");
         System.out.println("Union of {} and {1} is: {"+count4bList.union(count4aList).toString()+"}");
         System.out.println("Intersect of {1} and {} is: {"+count4aList.intersection(count4bList).toString()+"}");
         System.out.println("Intersect of {} and {1} is: {"+count4bList.intersection(count4aList).toString()+"}");
+        System.out.println("Difference of {1} and {} is: {"+count4aList.difference(count4bList).toString()+"}");
+        System.out.println("Difference of {} and {1} is: {"+count4bList.difference(count4aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
 
         System.out.println("*********************************************************************");
@@ -188,15 +202,18 @@ public class TestSLL {
         int[] count5bArr ={1};
         SLLSet count5aList = new SLLSet(count5aArr);
         SLLSet count5bList = new SLLSet(count5bArr);
-        System.out.println("Unique value count between {1} and {} is: "+count5aList.countUnique(count5bList));
-        System.out.println("Common value count between {1} and {} is: "+count5aList.countCommon(count5bList));
+        System.out.println("Unique value count between {} and {1} is: "+count5aList.countUnique(count5bList));
+        System.out.println("Common value count between {} and {1} is: "+count5aList.countCommon(count5bList));
         System.out.println("Difference value count between {1} and {} is: "+count5aList.countDifference(count5bList));
         System.out.println("Union of {} and {1} is: {"+count5aList.union(count5bList).toString()+"}");
         System.out.println("Union of {1} and {} is: {"+count5bList.union(count5aList).toString()+"}");
         System.out.println("Intersect of {} and {1} is: {"+count5aList.intersection(count5bList).toString()+"}");
         System.out.println("Intersect of {1} and {} is: {"+count5bList.intersection(count5aList).toString()+"}");
+        System.out.println("Difference of {} and {1} is: {"+count5aList.difference(count5bList).toString()+"}");
+        System.out.println("Difference of {1} and {} is: {"+count5bList.difference(count5aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
-        
+
         System.out.println("*********************************************************************");
         int[] count6aArr ={};
         int[] count6bArr ={};
@@ -209,8 +226,11 @@ public class TestSLL {
         System.out.println("Union of {} and {} is: {"+count6bList.union(count6aList).toString()+"}");
         System.out.println("Intersect of {} and {} is: {"+count6aList.intersection(count6bList).toString()+"}");
         System.out.println("Intersect of {} and {} is: {"+count6bList.intersection(count6aList).toString()+"}");
+        System.out.println("Difference of {} and {} is: {"+count6aList.difference(count6bList).toString()+"}");
+        System.out.println("Difference of {} and {} is: {"+count6bList.difference(count6aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
-
+        
         System.out.println("*********************************************************************");
         int[] count7aArr ={-5,-2,-1,0,1,5};
         int[] count7bArr ={-5,-2,-1,0,1,5};
@@ -223,7 +243,10 @@ public class TestSLL {
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.union(count7aList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7aList.intersection(count7bList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.intersection(count7aList).toString()+"}");
-        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7aList.difference(count7bList).toString()+"}");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {"+count7bList.difference(count7aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
         int[] count8aArr ={-5,-2,-1,0,1,5};
@@ -240,7 +263,10 @@ public class TestSLL {
         System.out.println("Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.union(count8aList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count8aList.intersection(count8bList).toString()+"}");
         System.out.println("Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.intersection(count8aList).toString()+"}");
-        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count8aList.difference(count8bList).toString()+"}");
+        System.out.println("Difference of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count8bList.difference(count8aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
         int[] count9aArr ={-100, -24, -7, 2, 5, 6, 8, 25};
@@ -257,7 +283,10 @@ public class TestSLL {
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.union(count9aList).toString()+"}");
         System.out.println("Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count9aList.intersection(count9bList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.intersection(count9aList).toString()+"}");
-        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Difference of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count9aList.difference(count9bList).toString()+"}");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {"+count9bList.difference(count9aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
         int[] count10aArr ={-100, -7, -5, -2, 0, 4, 6, 8, 25};
@@ -274,6 +303,9 @@ public class TestSLL {
         System.out.println("Union of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.union(count10aList).toString()+"}");
         System.out.println("Intersect of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count10aList.intersection(count10bList).toString()+"}");
         System.out.println("Intersect of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.intersection(count10aList).toString()+"}");
+        System.out.println("Difference of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {"+count10aList.difference(count10bList).toString()+"}");
+        System.out.println("Difference of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {"+count10bList.difference(count10aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
         
         System.out.println("*********************************************************************");
@@ -293,8 +325,11 @@ public class TestSLL {
         System.out.println("Union of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.union(count11aList).toString()+"}");
         System.out.println("Intersect of {3,8,14,15} and {2,8,9,15,100} is: {"+count11aList.intersection(count11bList).toString()+"}");
         System.out.println("Intersect of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.intersection(count11aList).toString()+"}");
+        System.out.println("Difference of {3,8,14,15} and {2,8,9,15,100} is: {"+count11aList.difference(count11bList).toString()+"}");
+        System.out.println("Difference of {2,8,9,15,100} and {3,8,14,15} is: {"+count11bList.difference(count11aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
-
+        
         System.out.println("*********************************************************************");
         int[] count12aArr ={1,5,7};
         int[] count12bArr ={2,3,4,5};
@@ -308,7 +343,19 @@ public class TestSLL {
         System.out.println("Union of {2,3,4,5} and {1,5,7} is: {"+count12bList.union(count12aList).toString()+"}");
         System.out.println("Intersect of {1,5,7} and {2,3,4,5} is: {"+count12aList.intersection(count12bList).toString()+"}");
         System.out.println("Intersect of {2,3,4,5} and {1,5,7} is: {"+count12bList.intersection(count12aList).toString()+"}");
-        System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Difference of {1,5,7} and {2,3,4,5} is: {"+count12aList.difference(count12bList).toString()+"}");
+        System.out.println("Difference of {2,3,4,5} and {1,5,7} is: {"+count12bList.difference(count12aList).toString()+"}");
+        // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
+        System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
+        /**/
+        
+        
+        
+        
+        
+        
+        
+        
         /*
         //demonstrating basics mechanics of adding elements to a linked list
         int[] arr0 = {1,2,3,4};

@@ -600,11 +600,7 @@ public class SLLSet {
 
         //below are the respective counters
         int arrayCounter = 0;
-        int countCommon = countCommon(s);
         int[] sortedIntersectElem = new int[countCommon(s)];
-
-        boolean thisLastElemAdded = false;
-        boolean sLastElemAdded = false;
 
         //this.SLLSet starts with this.headNode
         //s starts with s.headNode
@@ -669,10 +665,73 @@ public class SLLSet {
 
     public SLLSet difference(SLLSet s){
         SLLSet differenceSet = null;
-        int[] sortedUniqueElem = new int[countCommon(s)];
-        //to do
+        int[] sortedDiffElem = new int[countDifference(s)];
+        int arrayCounter=0;
+        SLLNode thisPointer, sPointer;
+        boolean found = false;
+        //two approach, 
+        // an efficient but hard to implement approach (similar node traversal approach as previous two methods above)
+        //or an inefficient but easy to implement approach (dynamically create new arrays and find difference)
 
-        return intersectSet;
+        //this.SLLSet starts with this.headNode
+        //s starts with s.headNode
+        thisPointer = this.headNode;
+        sPointer = s.headNode;
+
+        if(this.setSize>0 && s.setSize==0){
+            while(thisPointer.next!=null){
+                sortedDiffElem[arrayCounter] = thisPointer.value;
+                arrayCounter++;
+                thisPointer = thisPointer.next;
+            }
+            sortedDiffElem[arrayCounter] = thisPointer.value;
+            return new SLLSet(sortedDiffElem);
+        }
+
+        if(s.setSize>0 && this.setSize==0){
+            return new SLLSet();
+        }
+
+        if(s.setSize==0 && this.setSize==0){
+            return new SLLSet();
+        }
+
+        //construct two arrays
+        //find the difference
+        //and call it a day
+
+        int[] thisArray = new int[this.setSize];
+        int[] sArray = new int[s.setSize];
+
+        for (int i = 0; i < thisArray.length; i++) {
+            thisArray[i] = thisPointer.value;
+            thisPointer = thisPointer.next;
+        }
+        
+        for (int i = 0; i < sArray.length; i++) {
+            sArray[i] = sPointer.value;
+            sPointer = sPointer.next;
+        }
+
+        for (int i = 0; i < thisArray.length; i++) {
+            
+            inner: for (int j = 0; j < sArray.length; j++) {
+                if(thisArray[i]==sArray[j]){
+                    found = true;
+                    break inner;
+                }
+            }
+            if(found==false){
+                sortedDiffElem[arrayCounter]=thisArray[i];
+                arrayCounter++;
+            }
+            if(found==true){
+                found=false;
+            }
+        }
+
+        differenceSet = new SLLSet(sortedDiffElem);
+        return differenceSet;
     }
 
     public static SLLSet union(SLLSet[] sArray){
