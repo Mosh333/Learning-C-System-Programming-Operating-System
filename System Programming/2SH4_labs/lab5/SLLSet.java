@@ -775,6 +775,7 @@ public class SLLSet {
         }
 
         aggregateUnionSet = new SLLSet(tempArray);
+        System.out.println("aggregateUnionSet: {"+aggregateUnionSet.toString()+"}");
         for (int i = 1; i < sArray.length; i++) {
             tempArray = SLLSet.SLLSetAsArray(sArray,i);
             tempSet = new SLLSet(tempArray);
