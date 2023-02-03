@@ -4,7 +4,7 @@ Since I could use some additional practice in C programming, will start with lea
 Main motivation to cover this materials is to build a stronger foundation in Computer Science...   
 
 ### Concepts to cover: 
- 1) System Programming (In Progress)   
+ 1) System Programming (Tentatively Complete)   
  2) Concurrent Systems (To be completed)   
  3) Operating Systems (To be completed)   
  4) Distributed Systems (To be completed)   
