@@ -1,5 +1,7 @@
 package lab5_2sh4;
 
+import lab5_2sh4.SLLSet;
+
 public class TestSLL {
     public static void main(String[] args)
     {
@@ -347,14 +349,64 @@ public class TestSLL {
         System.out.println("Difference of {2,3,4,5} and {1,5,7} is: {"+count12bList.difference(count12aList).toString()+"}");
         // System.out.println("Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail Fail");
         System.out.println("Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass");
-        /**/
         
+        System.out.println("*********************************************************************");
         
+        //count7aList = {-5,-2,-1,0,1,5}
+        //count7bList = {-5,-2,-1,0,1,5}
+        //count10aList = {-100, -7, -5, -2, 0, 4, 6, 8, 25}
+        //count10bList = {-5,-2,-1,0,1,5}
+        SLLSet SLLsetArray1[] ={count7aList, count7bList, count10aList, count10bList};
+
+        SLLSet SLLsetArrayUnion1 = SLLSet.union(SLLsetArray1);
+        System.out.println("Union of {-5,-2,-1,0,1,5}+{-5,-2,-1,0,1,5}+{-100, -7, -5, -2, 0, 4, 6, 8, 25}+{-5,-2,-1,0,1,5} is: ");
+        System.out.println("{ "+SLLsetArrayUnion1.toString()+" }");
+
+        System.out.println("*********************************************************************");
+
+        SLLSet[] SLLsetArray2 = null;
+
+        try {
+            SLLSet SLLsetArrayUnion2 = SLLSet.union(SLLsetArray2);
+            System.out.println(SLLsetArrayUnion2.toString());            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
         
-        
-        
-        
-        
+        System.out.println("*********************************************************************");
+
+        SLLSet[] SLLsetArray3 = {};
+
+        try {
+            SLLSet SLLsetArrayUnion3 = SLLSet.union(SLLsetArray3);
+            System.out.println(SLLsetArrayUnion3.toString());            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+
+        System.out.println("*********************************************************************");
+        //count7aList = {-5,-2,-1,0,1,5}
+        //count7bList = {-5,-2,-1,0,1,5}
+        //count10aList = {-100, -7, -5, -2, 0, 4, 6, 8, 25}
+        //count10bList = {-5,-2,-1,0,1,5}
+        SLLSet[] SLLsetArray4 = {count10aList};
+
+        SLLSet SLLsetArrayUnion4 = SLLSet.union(SLLsetArray4);
+        System.out.println("Union of {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: ");
+        System.out.println("{"+SLLsetArrayUnion4.toString()+"}");
+
+        System.out.println("*********************************************************************");
+        //count8aList = {-5,-2,-1,0,1,5}
+        //count9aList = {-100, -24, -7, 2, 5, 6, 8, 25}
+        //count10aList = {-100, -7, -5, -2, 0, 4, 6, 8, 25}
+        //count12aList = {-5,-2,-1,0,1,5}
+        SLLSet[] SLLsetArray5 = {count8aList, count9aList, count10aList, count12aList};
+
+        SLLSet SLLsetArrayUnion5 = SLLSet.union(SLLsetArray5);
+        System.out.println("Union of {-5,-2,-1,0,1,5}+{-100, -24, -7, 2, 5, 6, 8, 25}+{-100, -7, -5, -2, 0, 4, 6, 8, 25}+{-5,-2,-1,0,1,5} is: ");
+        System.out.println("{"+SLLsetArrayUnion5.toString()+"}");
         
         /*
         //demonstrating basics mechanics of adding elements to a linked list

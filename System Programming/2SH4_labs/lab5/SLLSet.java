@@ -39,6 +39,26 @@ public class SLLSet {
 
     }
 
+    public static int[] SLLSetAsArray(SLLSet[] sArray, int index) throws NullPointerException, IllegalArgumentException{
+        if(sArray[index] == null){
+            throw new NullPointerException("Supplied SLLSet linked list is null!");
+        }
+
+        if(sArray[index].setSize == 0){
+            throw new IllegalArgumentException("Length of the supplied SLLSet linked list is 0 and invalid size!");
+        }
+        
+        int[] SLLSetAsArray = new int[sArray[index].setSize];
+        SLLNode tempPointer = sArray[index].headNode;
+
+        for (int i = 0; i < SLLSetAsArray.length; i++) {
+            SLLSetAsArray[i] = tempPointer.value;
+            tempPointer = tempPointer.next;
+        }
+
+        return SLLSetAsArray;
+    }
+
     public int getSize(){
         int counter=0;
         if(this.headNode == null){
@@ -734,13 +754,35 @@ public class SLLSet {
         return differenceSet;
     }
 
-    public static SLLSet union(SLLSet[] sArray){
+    public static SLLSet union(SLLSet[] sArray) throws NullPointerException, IllegalArgumentException{
         //given an array of SLLSet, find the union between this and sArray[]
-        SLLSet intersectSet = null;
-        int[] sortedUniqueElem = new int[countDifference(s)];
-        //to do
+        SLLSet aggregateUnionSet = null;
+        SLLSet tempSet = null;
 
-        return intersectSet;
+        if(sArray == null){
+            throw new NullPointerException("Supplied SLLSet array is null!");
+        }
+
+        if(sArray.length == 0){
+            throw new IllegalArgumentException("Length of the supplied SLLSet array is 0 and invalid size!");
+        }
+
+        int[] tempArray;
+        //must pass below by reference or get "sArray cannot be resolved to a variable" error if passing just the SLLnode value
+        tempArray = SLLSet.SLLSetAsArray(sArray,0);
+        if(sArray.length==1){
+            return new SLLSet(tempArray);
+        }
+
+        aggregateUnionSet = new SLLSet(tempArray);
+        for (int i = 1; i < sArray.length; i++) {
+            tempArray = SLLSet.SLLSetAsArray(sArray,i);
+            tempSet = new SLLSet(tempArray);
+            aggregateUnionSet = aggregateUnionSet.union(tempSet);
+            System.out.println("aggregateUnionSet: {"+aggregateUnionSet.toString()+"}");
+        }
+
+        return aggregateUnionSet;
     }
     
 
