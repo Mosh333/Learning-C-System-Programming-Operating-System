@@ -1,0 +1,3 @@
+Originally was trying the correct approach for mmap() in alloc.c and prov-rep.c but I could not get the synchronization between the mmap between the process to work properly when
+writing back to the file. So I did a "cheat" and read the file each time and mapped it to make the functionality of the program "work" when writing back with mmap() (at least I did
+not write back using fwrite() or write()).
