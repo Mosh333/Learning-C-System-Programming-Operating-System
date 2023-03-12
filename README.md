@@ -16,14 +16,14 @@ To be done in C/Java
 <br>
 - Redo CoE 2SH4 Labs ✅
     - Status: Labs 5/5 complete (includes all bonus questions)
-    - Repository [here](./System\ Programming/2SH4_labs/)
+    - Repository [here](./System%20Programming/2SH4_labs/)
 
 ## Operating Systems ✅
 To be done in C
 <br>
 - Redo SoE 3SH3 Labs ✅
     - Status: Labs 5/5 complete
-    - Repository [here](./Operating\ Systems/3SH3_labs/)
+    - Repository [here](./Operating%20Systems/3SH3_labs/)
 
 
 ## Concurrent Programming
