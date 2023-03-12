@@ -1,7 +1,8 @@
-# Learning System Programming, Operating System, Concurrent System, and Distributed System
-Since I could use some additional practice in C programming, will start with learning C system programming first. Then will move on to Operating System and Concurrent System contents. After that, hoping to cover Distributed System (probably in Golang but we will see).
+# Improve CS Fundamentals
 
-Main motivation to cover this materials is to build a stronger foundation in Computer Science...	
+Main goal is to improve computing fundamentals. Topic to cover are System Programming, Operating System, Concurrent System, and Distributed System.
+
+Main motivation to cover this materials is to build a stronger hands on foundation in Computer Science...	
 
 ### Concepts to cover: 
  1) System Programming ✅
@@ -29,6 +30,7 @@ To be done in C
 ## Concurrent Programming
 To be done in Python or Golang
 Section yet to be 🚧
+- https://superfastpython.com/python-concurrency-books/
 
 ## Distributed Systems
 To be done in C or Golang
