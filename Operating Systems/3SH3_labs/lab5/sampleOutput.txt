@@ -1,0 +1,206 @@
+moshiur@moshiur-virtual-machine:~/Documents/GitHub/local_setup_3sh3/lab5$ rm ./lab5; gcc main.c -o lab5; ./lab5 -d ./testDir/
+The following are the file attributes for: ./testDir/
+Mode (permissions): 0775 (octal)
+Number of links: 6
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 18:20:06 2023
+Provided directoryPath is: ./testDir/
+The file/directory/symlink does not exist!
+The following are the file attributes for: ./testDir/myCuteCats
+Mode (permissions): 0775 (octal)
+Number of links: 2
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 16:10:38 2023
+Provided directoryPath is: ./testDir/myCuteCats
+The following are the file attributes for: ./testDir/myCuteCats/myCatPicture.png
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 0 bytes
+Size in blocks: 0
+Last modification time: Sun Mar 12 16:08:22 2023
+Name: ./testDir/myCuteCats/myCatPicture.png
+The following are the file attributes for: ./testDir/myCuteCats/mySpecialCat.jpeg
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 247743 bytes
+Size in blocks: 488
+Last modification time: Sun Mar 12 16:10:08 2023
+Name: ./testDir/myCuteCats/mySpecialCat.jpeg
+The following are the file attributes for: ./testDir/executables
+Mode (permissions): 0775 (octal)
+Number of links: 3
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 16:12:33 2023
+Provided directoryPath is: ./testDir/executables
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64
+Mode (permissions): 0755 (octal)
+Number of links: 2
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 16:12:33 2023
+Provided directoryPath is: ./testDir/executables/sublime-text_build-4143_amd64
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/control.tar.xz
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 432 bytes
+Size in blocks: 8
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/control.tar.xz
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/debian-binary
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4 bytes
+Size in blocks: 8
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/debian-binary
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/data.tar.xz
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 16599324 bytes
+Size in blocks: 32424
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/data.tar.xz
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64.deb
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 16599948 bytes
+Size in blocks: 32424
+Last modification time: Sat Feb  4 18:51:19 2023
+Name: ./testDir/executables/sublime-text_build-4143_amd64.deb
+The following are the file attributes for: ./testDir/inaccessibleFolder
+Mode (permissions): 00 (octal)
+Number of links: 2
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 18:22:15 2023
+Provided directoryPath is: ./testDir/inaccessibleFolder
+Value of errno: 13
+Error printed by perror: Permission denied
+Directory does not exist or inaccessible directory: Permission denied
+The following are the file attributes for: ./testDir/differentOwnerFile.txt
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: user1
+Group Name: user1
+Size in bytes: 0 bytes
+Size in blocks: 0
+Last modification time: Sun Mar 12 16:55:21 2023
+Name: ./testDir/differentOwnerFile.txt
+The following are the file attributes for: ./testDir/unaccessibleFile.txt
+Mode (permissions): 00 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 0 bytes
+Size in blocks: 0
+Last modification time: Sun Mar 12 16:40:41 2023
+Name: ./testDir/unaccessibleFile.txt
+The following are the file attributes for: ./testDir/folder1
+Mode (permissions): 0775 (octal)
+Number of links: 3
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Wed Mar  8 19:26:38 2023
+Provided directoryPath is: ./testDir/folder1
+The file/directory/symlink does not exist!
+The following are the file attributes for: ./testDir/file1.txt
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4 bytes
+Size in blocks: 8
+Last modification time: Tue Mar  7 21:36:05 2023
+Name: ./testDir/file1.txt
+The following are the file attributes for: ./testDir/symlinkHead
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 60 bytes
+Size in blocks: 8
+Last modification time: Wed Mar  8 19:34:38 2023
+Name: ./testDir/symlinkHead -> ./folder1/folder2/symlinkTail
+moshiur@moshiur-virtual-machine:~/Documents/GitHub/local_setup_3sh3/lab5$ rm ./lab5; gcc main.c -o lab5; ./lab5 -d ./testDir/executables/
+The following are the file attributes for: ./testDir/executables/
+Mode (permissions): 0775 (octal)
+Number of links: 3
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 16:12:33 2023
+Provided directoryPath is: ./testDir/executables/
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64
+Mode (permissions): 0755 (octal)
+Number of links: 2
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4096 bytes
+Size in blocks: 8
+Last modification time: Sun Mar 12 16:12:33 2023
+Provided directoryPath is: ./testDir/executables/sublime-text_build-4143_amd64
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/control.tar.xz
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 432 bytes
+Size in blocks: 8
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/control.tar.xz
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/debian-binary
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 4 bytes
+Size in blocks: 8
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/debian-binary
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64/data.tar.xz
+Mode (permissions): 0644 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 16599324 bytes
+Size in blocks: 32424
+Last modification time: Fri Nov 11 03:36:51 2022
+Name: ./testDir/executables/sublime-text_build-4143_amd64/data.tar.xz
+The following are the file attributes for: ./testDir/executables/sublime-text_build-4143_amd64.deb
+Mode (permissions): 0664 (octal)
+Number of links: 1
+Owner Name: moshiur
+Group Name: moshiur
+Size in bytes: 16599948 bytes
+Size in blocks: 32424
+Last modification time: Sat Feb  4 18:51:19 2023
+Name: ./testDir/executables/sublime-text_build-4143_amd64.deb
+moshiur@moshiur-virtual-machine:~/Documents/GitHub/local_setup_3sh3/lab5$ 

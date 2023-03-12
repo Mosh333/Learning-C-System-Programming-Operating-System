@@ -1,0 +1,3 @@
+please do "sudo chmod 000 unaccessibleFile.txt"
+and
+please do "sudo chmod 000 inaccessibleFolder"

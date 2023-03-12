@@ -5,8 +5,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <getopt.h>
-#include "fileAttributes.c"
-#include "directoryTraversal.c"
+#include "directoryTraversal.c" //this file already #include "fileAttributes.c" 
 
 /*
     df -> report file system disk usage
@@ -29,7 +28,9 @@
             - rm ./lab5; gcc main.c -o lab5; ./lab5 -d /blah/blah -f /ha/ha
         Correctly:
             - rm ./lab5; gcc main.c -o lab5; ./lab5 -f /path/for/my/file.txt
+            - rm ./lab5; gcc main.c -o lab5; ./lab5 -f ./path/for/my/file.txt
             - rm ./lab5; gcc main.c -o lab5; ./lab5 -d /path/for/my/directory
+            - rm ./lab5; gcc main.c -o lab5; ./lab5 -d ./path/for/my/directory/
 */
 
 int main(int argc, char *argv[])
@@ -114,17 +115,6 @@ int main(int argc, char *argv[])
     if(f_flag==1){
         printFileAttributes(filepath);
     }
-
-    // printf("d_flag=%d; f_flag=%d; tfnd=%d; nsecs=%d; optind=%d\n",
-    //        d_flag, f_flag, tfnd, nsecs, optind);
-
-    // printf("argument #0: %s\n", argv[0]);
-    // printf("argument #1: %s\n", argv[1]);
-    // printf("argument #2: %s\n", argv[2]);
-    // printf("argument #3: %s\n", argv[3]);
-    // printf("argument #4: %s\n", argv[4]);
-
-    /* Other code omitted */
 
     exit(EXIT_SUCCESS);
 
