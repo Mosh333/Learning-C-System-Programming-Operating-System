@@ -1,0 +1,7 @@
+Running program now
+Running test case 1: Hello + world! = Helloworld!
+Running test case 2: Hello + '\0' = Hello
+Running test case 3: '\0' + Hello = Hello
+Running test case 4: '\0' + '\0' = 
+Running test case 5: 学年別漢字配当表 + وحة المفاتيح = 学年別漢字配当表وحة المفاتيح
+Ending program now

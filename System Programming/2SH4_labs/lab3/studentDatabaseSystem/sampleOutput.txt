@@ -1,0 +1,67 @@
+$ ./runStudentDatabaseSystem
+Hello World!
+Size originally is before the create_class_list() call is: 0
+0
+Reading from file called: ./src/studentDatabase.txt
+Contents of the file are: 
+Number of students are: 7
+0x55c3367578a0, 0x7fffdbea3320, 1200, Isaac, Newton
+0x55c3367578a8, 0x7fffdbea3320, 2012, Bob, Smith
+0x55c3367578b0, 0x7fffdbea3320, 3520, Jane, Doe
+0x55c3367578b8, 0x7fffdbea3320, 4580, Alan, Turing
+0x55c3367578c0, 0x7fffdbea3320, 5630, Sarah, McJoe
+0x55c3367578c8, 0x7fffdbea3320, 6737, Micro, Soft
+0x55c3367578d0, 0x7fffdbea3320, 9000, Elvis, Presley
+classList[0]->studentId: 1200
+find() output is: 3
+Reading from file called: ./src/studentGrades.txt
+loaded up data: 6737, 59, 100
+Grades: 59 100
+loaded up data: 2012, 3, 69
+Grades: 3 69
+loaded up data: 4580, 50, 84
+Grades: 50 84
+loaded up data: 9000, 78, 95
+Grades: 78 95
+loaded up data: 3520, 92, 12
+Grades: 92 12
+loaded up data: 1200, 75, 82
+Grades: 75 82
+loaded up data: 5630, 83, 55
+Grades: 83 55
+Writing student ID and final grade to a file called: ./src/studentFinalGradesOnly.txt
+ID: 1200, name: Isaac Newton, project 1 grade: 75, project 2 grade: 82, final grade: 78.50
+ID: 2012, name: Bob Smith, project 1 grade: 3, project 2 grade: 69, final grade: 36.00
+ID: 3520, name: Jane Doe, project 1 grade: 92, project 2 grade: 12, final grade: 52.00
+ID: 4580, name: Alan Turing, project 1 grade: 50, project 2 grade: 84, final grade: 67.00
+ID: 5630, name: Sarah McJoe, project 1 grade: 83, project 2 grade: 55, final grade: 69.00
+ID: 6737, name: Micro Soft, project 1 grade: 59, project 2 grade: 100, final grade: 79.50
+ID: 9000, name: Elvis Presley, project 1 grade: 78, project 2 grade: 95, final grade: 86.50
+------------------------------------------------------
+Removing student ID = 4580
+1200 75 82 1200 Isaac Newton 78.500000
+2012 3 69 2012 Bob Smith 36.000000
+3520 92 12 3520 Jane Doe 52.000000
+5630 83 55 5630 Sarah McJoe 69.000000
+6737 59 100 6737 Micro Soft 79.500000
+9000 78 95 9000 Elvis Presley 86.500000
+size is: 6
+------------------------------------------------------
+Removing student ID = 9000
+1200 75 82 1200 Isaac Newton 78.500000
+2012 3 69 2012 Bob Smith 36.000000
+3520 92 12 3520 Jane Doe 52.000000
+5630 83 55 5630 Sarah McJoe 69.000000
+6737 59 100 6737 Micro Soft 79.500000
+size is: 5
+------------------------------------------------------
+Removing student ID = 1200
+2012 3 69 2012 Bob Smith 36.000000
+3520 92 12 3520 Jane Doe 52.000000
+5630 83 55 5630 Sarah McJoe 69.000000
+6737 59 100 6737 Micro Soft 79.500000
+size is: 4
+The student with ID=32 does not exist in the list.
+destroy_list results: 
+1782979927 3 69 1782979927 �U Smith 36.000000
+Size after the create_class_list() call is: 0
