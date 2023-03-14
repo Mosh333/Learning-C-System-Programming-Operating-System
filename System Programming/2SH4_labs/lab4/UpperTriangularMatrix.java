@@ -82,7 +82,7 @@ public class UpperTriangularMatrix {
 
         int arrayIndex = (this.matrixSizeN * i) + j - ((i * (i + 1)) / 2);
         if (i > j) {
-            this.matrixData[arrayIndex] = x;    //setting it to 0 btw
+            this.matrixData[arrayIndex] = x; // setting it to 0 btw
         } else {
             // https://jamesmccaffrey.wordpress.com/2010/05/14/converting-a-triangular-matrix-to-an-array/
             // i = (n * x) + y – ((x * (x+1)) / 2)
@@ -150,36 +150,41 @@ public class UpperTriangularMatrix {
     public double[] effSolve(double[] b) throws IllegalArgumentException {
         // only programming friendly approach (bottom up)
         // need to implement https://algowiki-project.org/en/Backward_substitution
-        //  validate matrix solver with: https://octave-online.net/
+        // validate matrix solver with: https://octave-online.net/
 
-        if(b.length!=this.matrixSizeN){
+        if (b.length != this.matrixSizeN) {
             throw new IllegalArgumentException("The dimension of B must match dimension N!");
         }
 
-        //I think invoking this method vs rewriting the entire thing again makes no difference
-        //even with the "specification"/requirement
-        if(this.getDet()==0){
-            throw new IllegalArgumentException("The determinant is 0 (at least one of the elements in the main diagnonal has a 0!)");
+        // I think invoking this method vs rewriting the entire thing again makes no
+        // difference
+        // even with the "specification"/requirement
+        if (this.getDet() == 0) {
+            throw new IllegalArgumentException(
+                    "The determinant is 0 (at least one of the elements in the main diagnonal has a 0!)");
         }
 
         double intermediateAccum = 0.0;
         double[] x = new double[b.length];
-        x[x.length-1] = b[b.length-1]/this.matrixData[this.matrixData.length-1];
+        x[x.length - 1] = b[b.length - 1] / this.matrixData[this.matrixData.length - 1];
 
-        //solve Ax=B
-        //see http://www.mathwords.com/b/back_substitution.htm, for a practical walkthrough with an upper tri matrix (gauss reduced mat btw, row echoleon form or something)
+        // solve Ax=B
+        // see http://www.mathwords.com/b/back_substitution.htm, for a practical
+        // walkthrough with an upper tri matrix (gauss reduced mat btw, row echoleon
+        // form or something)
         // System.out.println("x.length is: "+x.length);
 
-        for (int i = this.matrixSizeN-2; i >= 0; i--) {
+        for (int i = this.matrixSizeN - 2; i >= 0; i--) {
             intermediateAccum = 0;
-            for (int j = this.matrixSizeN-1; j >= 0; j--) {
-                intermediateAccum += this.getElement(i, j)*x[j];
+            for (int j = this.matrixSizeN - 1; j >= 0; j--) {
+                intermediateAccum += this.getElement(i, j) * x[j];
             }
-            
-            //absolutely wild how this works, mind boggling
-            //see 1.2 Mathematical description of the algorithm from
-            //https://algowiki-project.org/en/Backward_substitution
-            x[i] = (b[i]-intermediateAccum)/this.getElement(i, i);
+
+            // absolutely wild how this works, mind boggling
+            // see 1.2 Mathematical description of the algorithm from
+            // https://algowiki-project.org/en/Backward_substitution
+            // https://courses.physics.illinois.edu/cs357/sp2020/notes/ref-9-linsys.html
+            x[i] = (b[i] - intermediateAccum) / this.getElement(i, i);
         }
 
         return x;
