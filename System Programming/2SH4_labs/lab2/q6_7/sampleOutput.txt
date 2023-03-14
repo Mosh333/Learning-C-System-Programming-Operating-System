@@ -1,0 +1,55 @@
+$ ./q6_7
+Hello World!
+*********************
+val1 and pos1
+The original array: 0 0 23 0 -7 0 0 48 
+Val 23 is at position 2
+Val -7 is at position 4
+Val 48 is at position 7
+The val array is: 23 -7 48 
+The pos array is: 2 4 7 
+Reconstructed array: 0 0 23 0 -7 0 0 48 
+*********************
+val2 and pos2
+The original array: 0 -523 0 0 89 0 0 48 0 4 6 0 0 
+Val -523 is at position 1
+Val 89 is at position 4
+Val 48 is at position 7
+Val 4 is at position 9
+Val 6 is at position 10
+The val array is: -523 89 48 4 6 
+The pos array is: 1 4 7 9 10 
+Reconstructed array: 0 -523 0 0 89 0 0 48 0 4 6 0 0 
+*********************
+val3 and pos3
+The original array: 1 0 0 0 0 0 0 0 -1 0 0 0 0 
+Val 1 is at position 0
+Val -1 is at position 8
+The val array is: 1 -1 
+The pos array is: 0 8 
+Reconstructed array: 1 0 0 0 0 0 0 0 -1 0 0 0 0 
+*********************
+val1 array: -523 89 48 4 6 
+val2 array: 23 -7 48 
+pos1 array: 1 4 7 9 10 
+pos2 array: 2 4 7 
+val3: -523 23 82 96 4 6 
+pos3: 1 2 4 7 9 10 
+Unique Pos Entries: 6
+*********************
+val1 array: 23 -7 48 
+val2 array: 1 -1 
+pos1 array: 2 4 7 
+pos2 array: 0 8 
+val3: 1 23 -7 48 -1 
+pos3: 0 2 4 7 8 
+Unique Pos Entries: 5
+*********************
+val1 array: 1 -1 
+val2 array: -523 89 48 4 6 
+pos1 array: 0 8 
+pos2 array: 1 4 7 9 10 
+val3: 1 -523 89 48 -1 4 6 
+pos3: 0 1 4 7 8 9 10 
+Unique Pos Entries: 7
+*********************ss

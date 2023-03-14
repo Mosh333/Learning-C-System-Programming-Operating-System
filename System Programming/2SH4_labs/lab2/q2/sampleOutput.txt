@@ -1,0 +1,31 @@
+$ ./q2
+Hello World!
+*********************
+100 23 132 66 
+74 45 65 95 
+75 49 52 51 
+6 51 732 14 
+diagonally indominant
+Output of is_diag_dom() 0
+*********************
+1 0 0 0 
+0 1 0 0 
+0 0 1 0 
+0 0 0 1 
+diagonally dominant
+Output of is_diag_dom() 1
+*********************
+-1 0 0 0 
+0 -1 0 0 
+0 0 -1 0 
+0 0 0 -1 
+diagonally dominant
+Output of is_diag_dom() 1
+*********************
+-1 0 0 0 
+0 -1 0 0 
+0 0 -1 0 
+0 0 0 0 
+diagonally indominant
+Output of is_diag_dom() 0
+*********************

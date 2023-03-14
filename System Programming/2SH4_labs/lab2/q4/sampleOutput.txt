@@ -1,0 +1,95 @@
+$ ./q4
+Hello World!
+*********************
+begin
+Letter frequency for the word "word" is:
+0 The count of 'A' and 'a' is 0
+1 The count of 'B' and 'b' is 0
+2 The count of 'C' and 'c' is 0
+3 The count of 'D' and 'd' is 1
+4 The count of 'E' and 'e' is 0
+5 The count of 'F' and 'f' is 0
+6 The count of 'G' and 'g' is 0
+7 The count of 'H' and 'h' is 0
+8 The count of 'I' and 'i' is 0
+9 The count of 'J' and 'j' is 0
+10 The count of 'K' and 'k' is 0
+11 The count of 'L' and 'l' is 0
+12 The count of 'M' and 'm' is 0
+13 The count of 'N' and 'n' is 0
+14 The count of 'O' and 'o' is 1
+15 The count of 'P' and 'p' is 0
+16 The count of 'Q' and 'q' is 0
+17 The count of 'R' and 'r' is 1
+18 The count of 'S' and 's' is 0
+19 The count of 'T' and 't' is 0
+20 The count of 'U' and 'u' is 0
+21 The count of 'V' and 'v' is 0
+22 The count of 'W' and 'w' is 1
+23 The count of 'X' and 'x' is 0
+24 The count of 'Y' and 'y' is 0
+25 The count of 'Z' and 'z' is 0
+end
+*********************
+*********************
+begin
+Letter frequency for the word "AbSoRptIoMEtrIc" is:
+0 The count of 'A' and 'a' is 1
+1 The count of 'B' and 'b' is 1
+2 The count of 'C' and 'c' is 1
+3 The count of 'D' and 'd' is 0
+4 The count of 'E' and 'e' is 1
+5 The count of 'F' and 'f' is 0
+6 The count of 'G' and 'g' is 0
+7 The count of 'H' and 'h' is 0
+8 The count of 'I' and 'i' is 2
+9 The count of 'J' and 'j' is 0
+10 The count of 'K' and 'k' is 0
+11 The count of 'L' and 'l' is 0
+12 The count of 'M' and 'm' is 1
+13 The count of 'N' and 'n' is 0
+14 The count of 'O' and 'o' is 2
+15 The count of 'P' and 'p' is 1
+16 The count of 'Q' and 'q' is 0
+17 The count of 'R' and 'r' is 2
+18 The count of 'S' and 's' is 1
+19 The count of 'T' and 't' is 2
+20 The count of 'U' and 'u' is 0
+21 The count of 'V' and 'v' is 0
+22 The count of 'W' and 'w' is 0
+23 The count of 'X' and 'x' is 0
+24 The count of 'Y' and 'y' is 0
+25 The count of 'Z' and 'z' is 0
+end
+*********************
+*********************
+begin
+Letter frequency for the word "" is:
+0 The count of 'A' and 'a' is 0
+1 The count of 'B' and 'b' is 0
+2 The count of 'C' and 'c' is 0
+3 The count of 'D' and 'd' is 0
+4 The count of 'E' and 'e' is 0
+5 The count of 'F' and 'f' is 0
+6 The count of 'G' and 'g' is 0
+7 The count of 'H' and 'h' is 0
+8 The count of 'I' and 'i' is 0
+9 The count of 'J' and 'j' is 0
+10 The count of 'K' and 'k' is 0
+11 The count of 'L' and 'l' is 0
+12 The count of 'M' and 'm' is 0
+13 The count of 'N' and 'n' is 0
+14 The count of 'O' and 'o' is 0
+15 The count of 'P' and 'p' is 0
+16 The count of 'Q' and 'q' is 0
+17 The count of 'R' and 'r' is 0
+18 The count of 'S' and 's' is 0
+19 The count of 'T' and 't' is 0
+20 The count of 'U' and 'u' is 0
+21 The count of 'V' and 'v' is 0
+22 The count of 'W' and 'w' is 0
+23 The count of 'X' and 'x' is 0
+24 The count of 'Y' and 'y' is 0
+25 The count of 'Z' and 'z' is 0
+end
+*********************

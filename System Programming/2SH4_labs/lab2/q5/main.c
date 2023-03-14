@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     char source1[] = "word";
     char destination1[s1];
     //swapping %d and %s will cause a SIEGSEGV
-    printf("Length of %d is %s\n", source1, string_length(source1));
+    printf("Length of %s is %d\n", source1, string_length(source1));
     printf("Result of string_copy(%s, dest[]) call: ", source1);
     string_copy(source1, destination1, s1);
     printf("\n*********************\n");
