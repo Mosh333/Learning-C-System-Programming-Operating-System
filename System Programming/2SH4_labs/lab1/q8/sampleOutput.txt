@@ -1,10 +1,18 @@
-$ ./q8 a 2346
+$ ./q8 a 9806593
 Option a
 here!
-digits is 2346.
-Not a 7 digit number, please try again!
-Flip of 2346 is 0
-$ ./q8 b -2346
+digits is 9806593.
+Flip of 9806593 is 3956089
+$ ./q8 a 3412400
+Option a
+here!
+digits is 3412400.
+Flip of 3412400 is 42143
+$ ./q8 b -9806593
 Option b
-digits is -2346.
-Flip of -2346 is -6432
+digits is -9806593.
+Flip of -9806593 is -3956089
+$ ./q8 b -3412400
+Option b
+digits is -3412400.
+Flip of -3412400 is -42143
