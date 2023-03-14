@@ -1,0 +1,220 @@
+$  /usr/bin/env /usr/lib/jvm/java-19-openjdk-amd64/bin/java --enable-preview -XX:+ShowCodeDetailsInExceptionMessages -cp /home/moshiur/.config/Code/User/workspaceStorage/1275ce722f43fd9e5e1ef1b194158b33/redhat.java/jdt_ws/ReviewSysOpSystemsRepo_55ccbeb4/bin lab5_2sh4.TestSLL 
+Test constructor1--simple valid inputs: (1,2,3)
+1  2  3  4  5  6  7
+The length of list1 is: 7
+The memory address of list1 is 622488023
+1  2  3  4  5  6  7
+The length of list2_copyOfList1 is: 7
+The memory address of list2 is 1933863327
+Is 5 in arr1 = {1,2,3,4,5,6,7}?: true
+Is 20 in arr1 = {1,2,3,4,5,6,7}?: false
+Is 7 in arr1 = {1,2,3,4,5,6,7}?: true
+list1 before is: [1  2  3  4  5  6  7] has size of 7
+list1 now is: [1  2  3  4  5  6  7  8] has size of 8
+list2 before is: [5] has size of 1
+list2 now is: [1  5] has size of 2
+list3 before is: [5] has size of 1
+list3 now is: [5  7] has size of 2
+list4 before is: [-200  -20  -4  0  1  6  20  40  60  75] has size of 10
+list4 now is: [-200  -20  -4  -1  0  1  6  20  40  60  75] has size of 11
+Element -1 is already in linked list!
+list4 now is: [-200  -20  -4  -1  0  1  6  20  40  60  75] has size of 11
+list4 now is: [-200  -20  -4  -1  0  1  6  20  40  60  75  76] has size of 12
+list4 now is: [-200  -20  -18  -4  -1  0  1  6  20  40  60  75  76] has size of 13
+list4 now is: [-201  -200  -20  -18  -4  -1  0  1  6  20  40  60  75  76] has size of 14
+list4 now is: [-203  -201  -200  -20  -18  -4  -1  0  1  6  20  40  60  75  76] has size of 15
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  60  75  76] has size of 16
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  60  74  75  76] has size of 17
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  60  73  74  75  76] has size of 18
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  60  73  74  75  76  77] has size of 19
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  60  73  74  75  76  77] has size of 20
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76  77] has size of 21
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 20
+Element 77 is not in linked list!
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 20
+Element 77 is not in linked list!
+list4 now is: [-203  -202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 20
+list4 now is: [-202  -201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 19
+list4 now is: [-201  -200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 18
+list4 now is: [-200  -20  -18  -4  -1  0  1  6  20  40  58  59  60  73  74  75  76] has size of 17
+list4 now is: [-200  -20  -18  -4  -1  0  1  20  40  58  59  60  73  74  75  76] has size of 16
+list4 now is: [-200  -20  -18  -4  -1  0  1  20  40  58  59  60  74  75  76] has size of 15
+list8 before is: [5] has size of 1
+Element 73 is not in linked list!
+list8 now is: [5] has size of 1
+list8 now is: [] has size of 0
+list11 before is: [1  5] has size of 2
+list11 now is: [1] has size of 1
+list11 now is: [] has size of 0
+list12 before is: [1  5] has size of 2
+list12 now is: [5] has size of 1
+list12 now is: [] has size of 0
+*********************************************************************
+Unique value count between {1,5} and {2,3} is: 4
+Common value count between {1,5} and {2,3} is: 0
+Difference value count between {1,5} and {2,3} is: 2
+Union of {1,5} and {2,3} is: 1  2  3  5
+Union of {1,5} and {2,3} is: {1  2  3  5}
+Intersect of {1,5} and {2,3} is: {}
+Intersect of {1,5} and {2,3} is: {}
+Difference of {1,5} and {2,3} is: {1  5}
+Difference of {2,3} and {1,5} is: {2  3}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {-5,-2,-1,0,1,5} and {0,1} is: 6
+Common value count between {-5,-2,-1,0,1,5} and {0,1} is: 2
+Difference value count between {-5,-2,-1,0,1,5} and {0,1} is: 4
+Union of {-5,-2,-1,0,1,5} and {0,1} is: {-5  -2  -1  0  1  5}
+Union of {0,1} and {-5,-2,-1,0,1,5} is: {-5  -2  -1  0  1  5}
+Intersect of {-5,-2,-1,0,1,5} and {0,1} is: {0  1}
+Intersect of {0,1} and {-5,-2,-1,0,1,5} is: {0  1}
+Difference of {-5,-2,-1,0,1,5} and {0,1} is: {-5  -2  -1  5}
+Difference of {0,1} and {-5,-2,-1,0,1,5} is: {}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {0} and {1} is: 2
+Common value count between {0} and {1} is: 0
+Difference value count between {0} and {1} is: 1
+Union of {1} and {0} is: {0  0}
+Union of {0} and {1} is: {0  0}
+Intersect of {1} and {0} is: {}
+Intersect of {0} and {1} is: {}
+Difference of {1} and {0} is: {1}
+Difference of {0} and {1} is: {0}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {1} and {} is: 1
+Common value count between {1} and {} is: 0
+Difference value count between {1} and {} is: 1
+Difference value count between {} and {1} is: 0
+Union of {1} and {} is: {1}
+Union of {} and {1} is: {1}
+Intersect of {1} and {} is: {}
+Intersect of {} and {1} is: {}
+Difference of {1} and {} is: {1}
+Difference of {} and {1} is: {}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {} and {1} is: 1
+Common value count between {} and {1} is: 0
+Difference value count between {1} and {} is: 0
+Union of {} and {1} is: {1}
+Union of {1} and {} is: {1}
+Intersect of {} and {1} is: {}
+Intersect of {1} and {} is: {}
+Difference of {} and {1} is: {}
+Difference of {1} and {} is: {1}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {} and {} is: 0
+Common value count between {} and {} is: 0
+Difference value count between {} and {} is: 0
+Union of {} and {} is: {}
+Union of {} and {} is: {}
+Intersect of {} and {} is: {}
+Intersect of {} and {} is: {}
+Difference of {} and {} is: {}
+Difference of {} and {} is: {}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: 6
+Common value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: 6
+Difference value count between {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: 0
+Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {-5  -2  -1  0  1  5}
+Union of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {-5  -2  -1  0  1  5}
+Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {-5  -2  -1  0  1  5}
+Intersect of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {-5  -2  -1  0  1  5}
+Difference of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {}
+Difference of {-5,-2,-1,0,1,5} and {-5,-2,-1,0,1,5} is: {}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: 13
+Unique value count should be 13
+Common value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: 1
+Common value count should be 1
+Difference value count between {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: 5
+Difference value count should be 1
+Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {-100  -24  -7  -5  -2  -1  0  1  2  5  6  8  25}
+Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -24  -7  -5  -2  -1  0  1  2  5  6  8  25}
+Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {5}
+Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {5}
+Difference of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {-5  -2  -1  0  1}
+Difference of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -24  -7  2  6  8  25}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 13
+Unique value count should be 13
+Common value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 1
+Common value count should be 1
+Difference value count between {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 7
+Difference value count should be 8
+Union of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -24  -7  -5  -2  -1  0  1  2  5  6  8  25}
+Union of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {-100  -24  -7  -5  -2  -1  0  1  2  5  6  8  25}
+Intersect of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {5}
+Intersect of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {5}
+Difference of {-100, -24, -7, 2, 5, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -24  -7  2  6  8  25}
+Difference of {-5,-2,-1,0,1,5} and {-100, -24, -7, 2, 5, 6, 8, 25} is: {-5  -2  -1  0  1}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 12
+Unique value count should be 12
+Common value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 3
+Common value count should be 3
+Difference value count between {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: 6
+Difference value count should be 6
+Union of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -7  -5  -2  -1  0  1  4  5  6  8  25}
+Union of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {-100  -7  -5  -2  -1  0  1  4  5  6  8  25}
+Intersect of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-5  -2  0}
+Intersect of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {-5  -2  0}
+Difference of {-100, -7, -5, -2, 0, 4, 6, 8, 25} and {-5,-2,-1,0,1,5} is: {-100  -7  4  6  8  25}
+Difference of {-5,-2,-1,0,1,5} and {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: {-1  1  5}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {3,8,14,15} and {2,8,9,15,100} is: 7
+Unique value count should be 7
+Common value count between {3,8,14,15} and {2,8,9,15,100} is: 2
+Common value count should be 1
+Difference value count between {3,8,14,15} and {2,8,9,15,100} is: 2
+Difference value count should be 2
+Difference value count between {2,8,9,15,100} and {3,8,14,15} is: 3
+Difference value count should be 3
+Union of {3,8,14,15} and {2,8,9,15,100} is: {2  3  8  9  14  15  100}
+Union of {2,8,9,15,100} and {3,8,14,15} is: {2  3  8  9  14  15  100}
+Intersect of {3,8,14,15} and {2,8,9,15,100} is: {8  15}
+Intersect of {2,8,9,15,100} and {3,8,14,15} is: {8  15}
+Difference of {3,8,14,15} and {2,8,9,15,100} is: {3  14}
+Difference of {2,8,9,15,100} and {3,8,14,15} is: {2  9  100}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+Unique value count between {1,5,7} and {2,3,4,5} is: 6
+Common value count between {1,5,7} and {2,3,4,5} is: 1
+Difference value count between {1,5,7} and {2,3,4,5} is: 2
+Union of {1,5,7} and {2,3,4,5} is: 1  2  3  4  5  7
+Union of {1,5,7} and {2,3,4,5} is: {1  2  3  4  5  7}
+Union of {2,3,4,5} and {1,5,7} is: {1  2  3  4  5  7}
+Intersect of {1,5,7} and {2,3,4,5} is: {5}
+Intersect of {2,3,4,5} and {1,5,7} is: {5}
+Difference of {1,5,7} and {2,3,4,5} is: {1  7}
+Difference of {2,3,4,5} and {1,5,7} is: {2  3  4}
+Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass Pass
+*********************************************************************
+aggregateUnionSet: {-5  -2  -1  0  1  5}
+aggregateUnionSet: {-5  -2  -1  0  1  5}
+aggregateUnionSet: {-100  -7  -5  -2  -1  0  1  4  5  6  8  25}
+aggregateUnionSet: {-100  -7  -5  -2  -1  0  1  4  5  6  8  25}
+Union of {-5,-2,-1,0,1,5}+{-5,-2,-1,0,1,5}+{-100, -7, -5, -2, 0, 4, 6, 8, 25}+{-5,-2,-1,0,1,5} is: 
+{ -100  -7  -5  -2  -1  0  1  4  5  6  8  25 }
+*********************************************************************
+java.lang.NullPointerException: Supplied SLLSet array is null!
+*********************************************************************
+java.lang.IllegalArgumentException: Length of the supplied SLLSet array is 0 and invalid size!
+*********************************************************************
+Union of {-100, -7, -5, -2, 0, 4, 6, 8, 25} is: 
+{-100  -7  -5  -2  0  4  6  8  25}
+*********************************************************************
+aggregateUnionSet: {-5  -2  -1  0  1  5}
+aggregateUnionSet: {-100  -24  -7  -5  -2  -1  0  1  2  5  6  8  25}
+aggregateUnionSet: {-100  -24  -7  -5  -2  -1  0  1  2  4  5  6  8  25}
+aggregateUnionSet: {-100  -24  -7  -5  -2  -1  0  1  2  4  5  6  7  8  25}
+Union of {-5,-2,-1,0,1,5}+{-100, -24, -7, 2, 5, 6, 8, 25}+{-100, -7, -5, -2, 0, 4, 6, 8, 25}+{-5,-2,-1,0,1,5} is: 
+{-100  -24  -7  -5  -2  -1  0  1  2  4  5  6  7  8  25}
