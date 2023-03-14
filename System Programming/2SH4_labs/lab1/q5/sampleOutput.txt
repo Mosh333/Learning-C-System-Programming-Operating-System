@@ -1,0 +1,16 @@
+$ ./q5
+Please input the iteration count to compute π (Pi): 5
+The value of π (Pi) after 5 iteration is: 3.339682
+$ ./q5
+Please input the iteration count to compute π (Pi): 9
+The value of π (Pi) after 9 iteration is: 3.252366
+$ ./q5
+Please input the iteration count to compute π (Pi): 120
+The value of π (Pi) after 120 iteration is: 3.133259
+$ ./q5
+Please input the iteration count to compute π (Pi): 1000
+The value of π (Pi) after 1000 iteration is: 3.140593
+$ ./q5
+Please input the iteration count to compute π (Pi): -1
+Please input the correct integer count >= 1
+$

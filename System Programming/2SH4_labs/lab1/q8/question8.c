@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         option = argv[1][0];
         inputInt = atoi(argv[2]);
         //m = atoi(argv[1]);    //don't use this sus approach
-        printf("Raina %c\n", option);
+        printf("Option %c\n", option);
         if(option=='a'){
             printf("here!\n");
             print_seven_digits_backward(inputInt);

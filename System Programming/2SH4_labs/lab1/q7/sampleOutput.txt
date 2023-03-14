@@ -1,0 +1,25 @@
+$ ./q7 6
+Received argument 6!
+Hardcoded argument 1000!
+The following number is a perfect number: 6
+With the following factors: 1 2 3 
+
+$ ./q7 -1
+m value provided is invalid!
+$ ./q7 100
+Received argument 100!
+Hardcoded argument 1000!
+The following number is a perfect number: 6
+With the following factors: 1 2 3 
+The following number is a perfect number: 28
+With the following factors: 1 2 4 7 14 
+
+$ ./q7 1000
+Received argument 1000!
+Hardcoded argument 1000!
+The following number is a perfect number: 6
+With the following factors: 1 2 3 
+The following number is a perfect number: 28
+With the following factors: 1 2 4 7 14 
+The following number is a perfect number: 496
+With the following factors: 1 2 4 8 16 31 62 124 248 

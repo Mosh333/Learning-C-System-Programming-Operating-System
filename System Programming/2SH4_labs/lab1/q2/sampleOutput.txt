@@ -1,0 +1,6 @@
+$ gcc question2.c -o q2; ./q2
+Enter a positive integer n: 3
+Enter the 1th integer: 151
+Enter the 2th integer: 25
+Enter the 3th integer: -15
+Minimum value entered is: -15

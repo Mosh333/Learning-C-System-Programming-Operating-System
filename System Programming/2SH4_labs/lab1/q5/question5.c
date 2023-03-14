@@ -24,7 +24,7 @@ int main()
         }
         printf("The value of π (Pi) after %d iteration is: %f\n", n, accumulator);
     }else{
-        printf("Please input the correct integer count >= 1");
+        printf("Please input the correct integer count >= 1\n");
     }
 
     return 0;

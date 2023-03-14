@@ -1,0 +1,10 @@
+$ ./q8 a 2346
+Option a
+here!
+digits is 2346.
+Not a 7 digit number, please try again!
+Flip of 2346 is 0
+$ ./q8 b -2346
+Option b
+digits is -2346.
+Flip of -2346 is -6432

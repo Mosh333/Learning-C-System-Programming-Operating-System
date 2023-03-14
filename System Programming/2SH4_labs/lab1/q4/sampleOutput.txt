@@ -1,0 +1,18 @@
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: 89.0
+Your equivalent grade point is 3
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: -5
+Invalid input. Please try again.
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: asfd
+Your equivalent grade point is 0
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: asdfcx
+Your equivalent grade point is 0
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: 40.5
+Your equivalent grade point is 0
+$ gcc question4.c -lm -o q4; ./q4
+Please input your grade average: 76.2
+Your equivalent grade point is 2

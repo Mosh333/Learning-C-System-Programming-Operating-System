@@ -32,7 +32,7 @@ int main()
 }
 
 
-// // C program for the above approach
+// // C program for whether we want to get granular in the input checking (check if ASCII value is an integer)
 // #include <stdio.h>
 // int getIntegerOnly();
  

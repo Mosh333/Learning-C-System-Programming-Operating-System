@@ -1,0 +1,4 @@
+$ gcc question1.c -o q1; ./q1
+sum1=125388
+sum2=125388
+sum3=125388

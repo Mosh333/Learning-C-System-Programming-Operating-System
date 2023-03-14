@@ -1,0 +1,8 @@
+$ gcc question3.c -lm -o q3; ./q3
+Please input an integer (0 to end): 4
+Please input an integer (0 to end): 53521
+Your input is a five-digit number: 53521
+Please input an integer (0 to end): 23155
+Your input is a five-digit number: 23155
+Please input an integer (0 to end): -16644
+Your input is a five-digit number: 16644

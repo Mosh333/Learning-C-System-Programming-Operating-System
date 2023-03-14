@@ -41,7 +41,7 @@ void *hello_world(struct thread_worker_data *thread_args);
 // 3) clear; rm ./q7; gcc question7_threads.c -lm -o q7; ./q7 33550336 1
 // 4) clear; rm ./q7; gcc question7_threads.c -lm -o q7; ./q7 33550336 1000
 // and bunch of entries for m<=8128. It doesn't want to converge or finish running for entries 10^7 in size.
-// So conclusion is Pthread is slicing up the resources to hard and with too much overhead to make mathemtical
+// So conclusion is Pthread is slicing up the resources too hard and with too much overhead to make mathemtical
 // computation like this not worthwhile.
 // Also doesn't help that my program is O(n^3) essentially. If I remove the pretty printing stuff, I can get it
 // down to O(n^2). Let's try doing that and see if that helps. Nope tried that with tempArrays and still taking lots of time.
@@ -101,7 +101,6 @@ int main(int argc, char *argv[])
         m = strtol(argv[1],NULL,10);    //convert argv[1] from a char pointer to an int
         N = strtol(argv[2],NULL,10);
         pthread_t threads[N];
-        //m = atoi(argv[1]);    //don't use this sus approach
         if(m>1 && m >= N){    //optionally:  && m >= 2*N, does not make sense to spawn more threads than the number of possible jobs m
             /* spawn the threads */
             thread_args = initThreadArray(m,N);

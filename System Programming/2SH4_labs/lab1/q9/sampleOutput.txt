@@ -1,0 +1,28 @@
+$ ./q9
+writeIntegerSequenceFromBinarySequence() 
+Reading from files called: ./inputFile1.txt
+Contents of the file are: 
+Number of binary digits in the input file: 4
+Deleting and rewriting into files: ./outputFile1.txt
+Rewriting into files: ./outputFile1.txt
+Obtained 0
+prevBit -1 currBit 0 firstBit 0
+number of writes 0, int i is 0
+Obtained 0
+prevBit 0 currBit 0 firstBit 0
+number of writes 0, int i is 1
+Obtained 0
+prevBit 0 currBit 0 firstBit 0
+number of writes 0, int i is 2
+Obtained 0
+prevBit 0 currBit 0 firstBit 0
+number of writes 1, int i is 3
+
+**********************************
+writeBinaryStreamFromIntegerSequence() 
+Reading from files called: ./inputFile2.txt
+Contents of the file are: 
+Number of binary digits in the input file: 1
+Deleting and rewriting into files: ./outputFile2.txt
+Rewriting into files: ./outputFile2.txt
+Writing: 4x0's 
