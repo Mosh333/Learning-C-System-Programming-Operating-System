@@ -1,4 +1,4 @@
-moshiur@moshiur-virtual-machine:~/Documents/GitHub/local_setup_3sh3/lab5$ rm ./lab5; gcc main.c -o lab5; ./lab5 -d ./testDir/
+$ rm ./lab5; gcc main.c -o lab5; ./lab5 -d ./testDir/
 The following are the file attributes for: ./testDir/
 Mode (permissions): 0775 (octal)
 Number of links: 6

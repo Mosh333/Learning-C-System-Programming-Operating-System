@@ -100,7 +100,6 @@ void resourceProvide()
 
 
             printf("Mapped res.txt file to address space mmapPtr @ %p!", mmapPtrChild);
-            printf("\nMoshiur here\n");
             int resultMincore = mincore(mmapPtrChild,resFileStat.st_size,childBuffer);
 
             printf("Result of resultMincore is: %d\n", resultMincore);

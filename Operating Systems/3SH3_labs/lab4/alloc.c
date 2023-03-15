@@ -116,9 +116,9 @@ void resourceAlloc()
     //each iteration appends the correct line worth of updated file data into fileBuffer[]
     while(1){
 
-        printf("Moshiur - Contents of buffer with size of %d is: \n%s", strlen(mmapPtr), mmapPtr);
+        printf("Contents of buffer with size of %d is: \n%s", strlen(mmapPtr), mmapPtr);
         strcpy(buffer, mmapPtr);
-        printf("Moshiur - Contents of buffer with size of %d is: \n%s", strlen(buffer), buffer);
+        printf("Contents of buffer with size of %d is: \n%s", strlen(buffer), buffer);
         printf("Please enter resource type,units for it (eg 2,4):");
         scanf("%d,%d",&requestedResourceType, &requestedUnit);
         printf("The requestedResourceType is %d and requestedUnit is %d\n",requestedResourceType, requestedUnit);

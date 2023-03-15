@@ -1,0 +1,65 @@
+$ gcc main.c -lm -o lab1; ./lab1 1Process ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+^C
+CTRL+C pressed! Value of SIGINT is 2
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+^ZProcess ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+^C
+CTRL+C pressed! Value of SIGINT is 2
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+^VProcess ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+^ZProcess ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 23845
+Alarm! Value of SIGALRM is 14
+##########################################
+^Z
+CTRL+Z pressed! Value of SIGTSTP is 20
+
+$ gcc main.c -lm -o lab1; ./lab1 2Process ID: 24190
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 24190
+Alarm! Value of SIGALRM is 14
+##########################################
+^C
+CTRL+C pressed! Value of SIGINT is 2
+Process ID: 24190
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 24190
+Alarm! Value of SIGALRM is 14
+##########################################
+^XProcess ID: 24190
+Alarm! Value of SIGALRM is 14
+******************************************
+Process ID: 24190
+Alarm! Value of SIGALRM is 14
+##########################################
+^Z^Z
+CTRL+Z pressed! Value of SIGTSTP is 20
